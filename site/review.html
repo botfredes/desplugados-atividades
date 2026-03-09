@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Revisar Atividade - Desplugados</title>
+    <!-- Tailwind CSS + Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Supabase JS Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        /* Estilos mobile-first */
+        .badge-status-pendente {
+            background-color: #fbbf24 !important;
+            color: #1f2937 !important;
+        }
+        
+        .badge-status-em_revisao {
+            background-color: #3b82f6 !important;
+            color: white !important;
+        }
+        
+        .badge-status-aprovada {
+            background-color: #10b981 !important;
+            color: white !important;
+        }
+        
+        .badge-status-precisa_melhorias {
+            background-color: #ef4444 !important;
+            color: white !important;
+        }
+        
+        /* Melhorar toques em mobile */
+        .btn, .select, .input, .textarea {
+            min-height: 44px; /* Tamanho mínimo para toque */
+        }
+        
+        .btn-sm {
+            min-height: 36px;
+        }
+        
+        /* Espaçamento para mobile */
+        .mobile-padding {
+            padding-left: env(safe-area-inset-left);
+            padding-right: env(safe-area-inset-right);
+        }
+        
+        /* Scroll suave */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Ocultar barra de rolagem em alguns elementos */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Melhorar legibilidade em mobile */
+        .prose-mobile {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .prose-mobile p {
+            margin-bottom: 1rem;
+        }
+        
+        .prose-mobile ul, .prose-mobile ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .prose-mobile li {
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-base-100 mobile-padding">
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">
+        <div class="text-center">
+            <span class="loading loading-spinner loading-lg text-primary"></span>
+            <p id="loading-text" class="mt-4 text-lg font-semibold">Carregando...</p>
+        </div>
+    </div>
+
+    <!-- App Bar (Header) -->
+    <div class="navbar bg-base-100 shadow-md sticky top-0 z-40 mobile-padding">
+        <div class="navbar-start">
+            <a href="admin.html" class="btn btn-ghost btn-sm">
+                <i class="fas fa-arrow-left"></i>
+                <span class="hidden sm:inline ml-1">Voltar</span>
+            </a>
+        </div>
+        <div class="navbar-center">
+            <div class="text-sm font-semibold truncate max-w-[150px] sm:max-w-none">
+                <span id="page-title">Revisar</span>
+            </div>
+        </div>
+        <div class="navbar-end">
+            <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-sm">
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+                <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-40 p-2 shadow">
+                    <li><a onclick="location.reload()">
+                        <i class="fas fa-sync-alt"></i> Recarregar
+                    </a></li>
+                    <li><a href="admin.html">
+                        <i class="fas fa-list"></i> Ver Todas
+                    </a></li>
+                    <li><hr class="my-1"></li>
+                    <li><a href="index.html">
+                        <i class="fas fa-home"></i> Site
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main class="pb-24"> <!-- Espaço para o formulário fixo no final -->
+        <!-- Mensagem de erro -->
+        <div id="activity-not-found" class="hidden px-4 pt-4">
+            <div class="alert alert-error shadow-lg">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div>
+                    <h3 class="font-bold">Atividade não encontrada</h3>
+                    <div class="text-xs">Verifique se o ID está correto.</div>
+                </div>
+                <a href="admin.html" class="btn btn-sm btn-primary">Voltar para Admin</a>
+            </div>
+        </div>
+
+        <!-- Conteúdo da Atividade -->
+        <div id="activity-content" class="hidden">
+            <!-- Cabeçalho Fixo -->
+            <div class="sticky top-16 z-30 bg-base-100 shadow-sm px-4 py-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex-1 min-w-0">
+                        <h1 id="activity-title" class="text-xl font-bold truncate">Carregando...</h1>
+                        <div class="flex flex-wrap gap-1 mt-1">
+                            <span id="activity-status" class="badge badge-sm">Pendente</span>
+                            <span id="activity-id" class="badge badge-outline badge-sm">ID: 0</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-1">
+                        <div class="dropdown dropdown-end">
+                            <div tabindex="0" role="button" class="btn btn-sm btn-ghost">
+                                <i class="fas fa-flag"></i>
+                            </div>
+                            <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-40 p-2 shadow">
+                                <li><a onclick="updateStatus('pendente')">
+                                    <i class="fas fa-clock"></i> Pendente
+                                </a></li>
+                                <li><a onclick="updateStatus('em_revisao')">
+                                    <i class="fas fa-search"></i> Em Revisão
+                                </a></li>
+                                <li><a onclick="updateStatus('aprovada')">
+                                    <i class="fas fa-check"></i> Aprovada
+                                </a></li>
+                                <li><a onclick="updateStatus('precisa_melhorias')">
+                                    <i class="fas fa-exclamation-triangle"></i> Precisa Melhorias
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Informações Principais (Accordion para mobile) -->
+            <div class="px-4 pt-4 space-y-4">
+                <!-- Informações Básicas -->
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="checkbox" checked />
+                    <div class="collapse-title font-medium">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        Informações Básicas
+                    </div>
+                    <div class="collapse-content">
+                        <div class="space-y-3">
+                            <div>
+                                <label class="text-sm text-gray-500">Categoria</label>
+                                <p id="info-categoria" class="font-medium">-</p>
+                            </div>
+                            <div>
+                                <label class="text-sm text-gray-500">Faixa etária</label>
+                                <p id="info-idade" class="font-medium">-</p>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3">
+                                <div>
+                                    <label class="text-sm text-gray-500">Tempo</label>
+                                    <p id="info-tempo" class="font-medium">-</p>
+                                </div>
+                                <div>
+                                    <label class="text-sm text-gray-500">Preparo</label>
+                                    <p id="info-preparo" class="font-medium">-</p>
+                                </div>
+                                <div>
+                                    <label class="text-sm text-gray-500">Bagunça</label>
+                                    <p id="info-bagunca" class="font-medium">-</p>
+                                </div>
+                                <div>
+                                    <label class="text-sm text-gray-500">Custo</label>
+                                    <p id="info-custo" class="font-medium">-</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Descrição -->
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="checkbox" />
+                    <div class="collapse-title font-medium">
+                        <i class="fas fa-file-alt mr-2"></i>
+                        Descrição
+                    </div>
+                    <div class="collapse-content">
+                        <div class="prose-mobile">
+                            <p id="info-descricao" class="text-gray-600">-</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Como Aplicar -->
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="checkbox" />
+                    <div class="collapse-title font-medium">
+                        <i class="fas fa-play-circle mr-2"></i>
+                        Como Aplicar
+                    </div>
+                    <div class="collapse-content">
+                        <div class="prose-mobile">
+                            <p id="info-como-aplicar">-</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Materiais -->
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="checkbox" />
+                    <div class="collapse-title font-medium">
+                        <i class="fas fa-box-open mr-2"></i>
+                        Materiais
+                    </div>
+                    <div class="collapse-content">
+                        <div class="prose-mobile">
+                            <p id="info-materiais">-</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Objetivo e Benefícios -->
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="checkbox" />
+                    <div class="collapse-title font-medium">
+                        <i class="fas fa-bullseye mr-2"></i>
+                        Objetivo e Benefícios
+                    </div>
+                    <div class="collapse-content">
+                        <div class="space-y-3">
+                            <div>
+                                <label class="text-sm text-gray-500">Objetivo</label>
+                                <p id="info-objetivo" class="prose-mobile">-</p>
+                            </div>
+                            <div>
+                                <label class="text-sm text-gray-500">Por que é boa</label>
+                                <p id="info-porque-boa" class="prose-mobile">-</p>
+                            </div>
+                            <div>
+                                <label class="text-sm text-gray-500">O que resolve</label>
+                                <p id="info-resolve" class="prose-mobile">-</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Descrição Completa (HTML) -->
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="checkbox" />
+                    <div class="collapse-title font-medium">
+                        <i class="fas fa-code mr-2"></i>
+                        Descrição Completa
+                    </div>
+                    <div class="collapse-content">
+                        <div id="info-descricao-html" class="prose-mobile max-w-none overflow-x-auto">
+                            <p class="text-gray-500">Carregando...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Comentários -->
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="checkbox" />
+                    <div class="collapse-title font-medium">
+                        <i class="fas fa-comments mr-2"></i>
+                        Comentários
+                        <span id="comment-count" class="badge badge-primary badge-sm ml-2">0</span>
+                    </div>
+                    <div class="collapse-content">
+                        <div id="comments-container" class="space-y-4">
+                            <div class="text-center py-4">
+                                <i class="fas fa-comment-slash text-2xl text-gray-300 mb-2"></i>
+                                <p class="text-gray-500 text-sm">Nenhum comentário ainda.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Formulário Fixo no Final (como em apps mobile) -->
+    <div id="review-form" class="fixed bottom-0 left-0 right-0 bg-base-100 border-t border-base-300 shadow-lg p-4 z-40 hidden mobile-padding">
+        <div class="space-y-3">
+            <!-- Status Atual -->
+            <div class="flex items-center justify-between">
+                <div>
+                    <span class="text-sm font-medium">Status atual:</span>
+                    <span id="current-status-badge" class="badge badge-sm ml-2">Pendente</span>
+                </div>
+                <div class="dropdown dropdown-top dropdown-end">
+                    <div tabindex="0" role="button" class="btn btn-sm">
+                        Alterar Status
+                        <i class="fas fa-chevron-down ml-1"></i>
+                    </div>
+                    <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-40 p-2 shadow mb-2">
+                        <li><a onclick="updateStatus('pendente')">
+                            <i class="fas fa-clock"></i> Pendente
+                        </a></li>
+                        <li><a onclick="updateStatus('em_revisao')">
+                            <i class="fas fa-search"></i> Em Revisão
+                        </a></li>
+                        <li><a onclick="updateStatus('aprovada')">
+                            <i class="fas fa-check"></i> Aprovada
+                        </a></li>
+                        <li><a onclick="updateStatus('precisa_melhorias')">
+                            <i class="fas fa-exclamation-triangle"></i> Precisa Melhorias
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Campo de Comentário -->
+            <div class="form-control">
+                <textarea id="comment-text" class="textarea textarea-bordered" rows="2" 
+                    placeholder="Adicione um comentário, sugestão ou instrução para melhorias..."></textarea>
+            </div>
+
+            <!-- Campo de Links -->
+            <div class="form-control">
+                <textarea id="comment-links" class="textarea textarea-bordered text-sm" rows="1" 
+                    placeholder="Links de referência (um por linha)"></textarea>
+            </div>
+
+            <!-- Botões de Ação -->
+            <div class="flex gap-2">
+                <button onclick="addComment()" class="btn btn-primary flex-1">
+                    <i class="fas fa-paper-plane mr-2"></i>
+                    Adicionar Comentário
+                </button>
+                <button onclick="clearForm()" class="btn btn-ghost">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script principal -->
+    <script src="review.js"></script>
+</body>
+</html>

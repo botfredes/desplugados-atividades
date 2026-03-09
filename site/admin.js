@@ -262,13 +262,8 @@ document.addEventListener('DOMContentLoaded', function() {
                                     </div>
                                     <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-40 p-2 shadow">
                                         <li>
-                                            <a href="activity.html?id=${activity.id}" target="_blank">
-                                                <i class="fas fa-eye"></i> Ver Detalhes
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="https://github.com/botfredes/desplugados-atividades/edit/main/atividades/individuais/${String(activity.id).padStart(3, '0')}-${dados.slug || 'atividade'}.json" target="_blank">
-                                                <i class="fas fa-edit"></i> Editar JSON
+                                            <a href="review.html?id=${activity.id}">
+                                                <i class="fas fa-eye"></i> Revisar Atividade
                                             </a>
                                         </li>
                                         <li><hr class="my-1"></li>
@@ -294,9 +289,9 @@ document.addEventListener('DOMContentLoaded', function() {
                                         </li>
                                     </ul>
                                 </div>
-                                <a href="activity.html?id=${activity.id}" target="_blank" class="btn btn-sm btn-primary">
-                                    Ver Detalhes
-                                    <i class="fas fa-external-link-alt ml-1"></i>
+                                <a href="review.html?id=${activity.id}" class="btn btn-sm btn-primary">
+                                    Revisar
+                                    <i class="fas fa-edit ml-1"></i>
                                 </a>
                             </div>
                         </div>
