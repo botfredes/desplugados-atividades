@@ -1,0 +1,52 @@
+{
+  "id": 99,
+  "nome": "Escape Room Caseiro",
+  "categoria": "Desafios e Missões",
+  "faixa_etaria": "3-4 anos",
+  "tempo_entretenimento": "10-20 min",
+  "nivel_bagunca": "Alta",
+  "quantidade_materiais": "8+ itens",
+  "tipo_atividade": "Silenciosa",
+  "energia_crianca": "Baixa",
+  "supervisao": "Constante",
+  "local": "Qualquer",
+  "custo": "Baixo (até R$10)",
+  "preparo_adulto": "5 min",
+  "habilidade_desenvolvida": "Socialização",
+  "momento_ideal": "Qualquer hora",
+  "clima": "Sol",
+  "nivel_criatividade": "Alto",
+  "objetivo": "Desenvolver coordenação motora através de atividade prática",
+  "descricao": "A criança participa de uma caça ao tesouro temática, resolvendo pistas e enigmas para encontrar um prêmio escondido pela casa.",
+  "como_aplicar": "Escolha um tema (ex: piratas), crie 5-7 pistas com desenhos ou palavras simples, esconda-as em locais acessíveis, e oriente a criança a seguir as pistas até o prêmio final.",
+  "materiais_necessarios": "Papel, canetas coloridas, fita adesiva, pequenos prêmios (adesivos, balas, brinquedos pequenos) (papel sulfite, cartolina, papel kraft)",
+  "precisa_antecipacao": "Não",
+  "porque_e_boa": "Mantém a criança entretida por até 30 minutos com supervisão mínima, estimulando a resolução de problemas e a coordenação motora.",
+  "o_que_resolve": "Criança entediada em dia de chuva, pais precisam de tempo para tarefas domésticas.",
+  "tags": [
+    "linguagem",
+    "coordenação motora",
+    "autonomia",
+    "Desafios",
+    "Missões",
+    "Socialização"
+  ],
+  "created_at": "2026-02-17 22:18:58.228534+00",
+  "imagem_url": "/imagens/atividade-99.png",
+  "resumo_pais": "Caça ao tesouro temática que entretém a criança enquanto pais realizam outras atividades.",
+  "descricao_html": "<h3>O que é essa atividade?</h3><p>A criança participa de uma caça ao tesouro temática, resolvendo pistas e enigmas para encontrar um prêmio escondido pela casa.</p><h3>Como fazer em casa</h3><ol><li><strong>Escolha um tema:</strong> Decida um tema que a criança goste, como piratas, animais ou super-heróis.</li><li><strong>Crie as pistas:</strong> Escreva 5-7 pistas simples em papel, usando desenhos ou palavras fáceis de entender. Por exemplo, \"Procure onde guardamos os sapatos\" ou \"Vá até a cozinha e olhe embaixo da mesa\".</li><li><strong>Esconda as pistas:</strong> Coloque cada pista no local indicado, começando pela primeira e seguindo a ordem até a última, que levará ao prêmio final.</li><li><strong>Prepare o prêmio:</strong> Escolha um pequeno prêmio que a criança goste, como adesivos, balas ou um brinquedo pequeno, e esconda-o no local final.</li><li><strong>Inicie a caça:</strong> Dê a primeira pista à criança e incentive-a a seguir as instruções para encontrar as próximas pistas e, finalmente, o prêmio.</li></ol><h3>Dicas para os pais</h3><p>Adapte a complexidade das pistas conforme a idade e compreensão da criança. Se necessário, ofereça dicas adicionais para manter o interesse e a diversão. Lembre-se de supervisionar a atividade para garantir a segurança e o bem-estar da criança durante a brincadeira.</p>\n<h3>📚 Recursos Extras para Enriquecer a Atividade</h3>\n<p>Para tornar esta atividade ainda mais completa, sugerimos:</p>\n<ul>\n<li><strong>Materiais adicionais:</strong> Considere ter à mão itens relacionados à desafios e missões</li>\n<li><strong>Preparação antecipada:</strong> 5 min são suficientes para organizar tudo</li>\n<li><strong>Adaptações:</strong> A atividade pode ser simplificada para crianças mais novas ou complexificada para mais velhas</li>\n</ul>\n<p><em>Dica:</em> Pesquise online por \"Escape Room Caseiro\" + \"atividades infantis\" para mais inspirações.</p>\n\n<h3>⚠️ Dicas de Segurança</h3>\n<ul>\n<li><strong>Supervisão:</strong> Sempre supervisione atividades que envolvam objetos pequenos, líquidos ou ferramentas</li>\n<li><strong>Materiais:</strong> Use materiais não tóxicos e apropriados para a idade da criança</li>\n<li><strong>Espaço:</strong> Prepare um espaço seguro, livre de obstáculos e fácil de limpar</li>\n<li><strong>Proteção:</strong> Use aventais ou roupas velhas para atividades com tintas e colas</li>\n</ul>\n<h3>🔄 Variações da Atividade</h3><ul><li><strong>Para crianças mais novas:</strong> Simplifique as regras, reduza o tempo, ofereça mais ajuda</li><li><strong>Para crianças mais velhas:</strong> Aumente o desafio, adicione regras, incentive a autonomia</li><li><strong>Para fazer em grupo:</strong> Adapte para múltiplas crianças, crie times, promova cooperação</li><li><strong>Para dias chuvosos:</strong> Faça versão indoor, use materiais alternativos, adapte o espaço</li><li><strong>Para aprender mais:</strong> Relacione com conceitos educacionais, pesquise sobre o tema</li></ul>",
+  "imagem_prompt": "Criança de 4 anos seguindo pistas coloridas pela casa, sorrindo e animada, em um ambiente doméstico acolhedor, ilustração infantil moderna, cores quentes e suaves, estilo educativo, sem telas, sem texto",
+  "recursos_online": {
+    "pesquisa_sugerida": "Escape Room Caseiro atividades infantis",
+    "categoria": "Desafios e Missões",
+    "palavras_chave": [
+      "coordenação motora",
+      "autonomia",
+      "linguagem",
+      "Desafios",
+      "Missões"
+    ]
+  },
+  "enriquecido_em": "2026-03-08T23:53:18.252188Z",
+  "enriquecido_por": "OpenClaw - Juarez (Assistente)"
+}

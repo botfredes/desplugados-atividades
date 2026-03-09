@@ -1,0 +1,51 @@
+{
+  "id": 127,
+  "nome": "Gelatina Sensorial",
+  "categoria": "Atividades Sensoriais",
+  "faixa_etaria": "5-6 anos",
+  "tempo_entretenimento": "20-40 min",
+  "nivel_bagunca": "Baixa",
+  "quantidade_materiais": "8+ itens",
+  "tipo_atividade": "Muito Ativa",
+  "energia_crianca": "Qualquer",
+  "supervisao": "Nenhuma",
+  "local": "Qualquer",
+  "custo": "Alto (R$30+)",
+  "preparo_adulto": "10-15 min",
+  "habilidade_desenvolvida": "Linguagem",
+  "momento_ideal": "Manhã",
+  "clima": "Chuva",
+  "nivel_criatividade": "Baixo",
+  "objetivo": "Desenvolver lógica através de atividade prática",
+  "descricao": "A criança explora diferentes texturas e cores ao brincar com gelatina sensorial, desenvolvendo habilidades motoras e sensoriais.",
+  "como_aplicar": "Prepare gelatinas de diferentes cores e sabores, coloque-as em recipientes rasos, adicione brinquedos pequenos e deixe a criança explorar livremente.",
+  "materiais_necessarios": "Gelatinas em pó de diferentes sabores e cores, água, recipientes rasos, brinquedos pequenos e laváveis, colher, tigela, faca (uso do adulto), geladeira",
+  "precisa_antecipacao": "Não",
+  "porque_e_boa": "Mantém a criança engajada por até 40 minutos com pouca supervisão, estimulando o desenvolvimento sensorial e motor sem a necessidade de telas.",
+  "o_que_resolve": "Criança entediada em dia de chuva pedindo tela, pais precisam de 30 min para trabalhar",
+  "tags": [
+    "Linguagem",
+    "Sensoriais",
+    "Atividades",
+    "lógica",
+    "foco"
+  ],
+  "created_at": "2026-02-17 22:18:58.54169+00",
+  "imagem_url": "/imagens/atividade-127.png",
+  "resumo_pais": "Atividade sensorial com gelatina que mantém a criança engajada e desenvolve habilidades motoras e sensoriais.",
+  "descricao_html": "<h3>O que é essa atividade?</h3><p>A Gelatina Sensorial é uma brincadeira onde a criança explora diferentes texturas e cores ao manusear gelatinas preparadas com diversos sabores e cores. Essa atividade estimula o desenvolvimento sensorial e motor da criança de forma divertida e educativa.</p><h3>Como fazer em casa</h3><ol><li><strong>Preparar as gelatinas:</strong> Dissolva cada sabor de gelatina em 150 ml de água quente e 150 ml de água fria, conforme as instruções da embalagem. Utilize sabores e cores variadas para tornar a atividade mais interessante. </li><li><strong>Montar os recipientes:</strong> Coloque as gelatinas preparadas em recipientes rasos, como bandejas ou formas baixas, para facilitar o acesso da criança. Deixe cada camada de gelatina firmar na geladeira por cerca de 2 horas antes de adicionar a próxima camada. </li><li><strong>Adicionar brinquedos:</strong> Insira brinquedos pequenos e laváveis nas camadas de gelatina. Certifique-se de que os brinquedos sejam seguros e adequados para a idade da criança. </li><li><strong>Oferecer para a criança:</strong> Após todas as camadas estarem firmes e os brinquedos estarem embutidos na gelatina, entregue o recipiente para a criança explorar. Ela pode usar as mãos ou utensílios para retirar os brinquedos da gelatina, estimulando a coordenação motora fina e a percepção tátil. </li></ol><h3>Variações e ideias</h3><ul><li><strong>Gelatina congelada:</strong> Prepare a gelatina com antecedência e congele-a. A criança pode explorar a textura fria e a sensação de derretimento ao brincar. </li><li><strong>Gelatina em mosaico:</strong> Prepare gelatinas de diferentes sabores e cores, corte-as em cubos e misture-os em uma forma. Despeje uma camada de creme branco por cima e leve à geladeira até firmar. Corte em pedaços e sirva. </li><li><strong>Gelatina comestível:</strong> Utilize gelatina sem sabor e adicione corante alimentício para criar gelatinas comestíveis de diferentes cores e sabores. A criança pode explorar as texturas e cores enquanto aprende sobre alimentos. </li></ul><h3>Dica para os pais</h3><p>Se a atividade ficar muito bagunçada, não se preocupe! Utilize toalhas ou panos para proteger a área de brincadeira e facilite a limpeza. Envolver a criança na preparação das gelatinas também pode ser uma oportunidade para ensinar sobre medidas e cores.</p>\n<h3>📚 Recursos Extras para Enriquecer a Atividade</h3>\n<p>Para tornar esta atividade ainda mais completa, sugerimos:</p>\n<ul>\n<li><strong>Materiais adicionais:</strong> Considere ter à mão itens relacionados à atividades sensoriais</li>\n<li><strong>Preparação antecipada:</strong> 10-15 min são suficientes para organizar tudo</li>\n<li><strong>Adaptações:</strong> A atividade pode ser simplificada para crianças mais novas ou complexificada para mais velhas</li>\n</ul>\n<p><em>Dica:</em> Pesquise online por \"Gelatina Sensorial\" + \"atividades infantis\" para mais inspirações.</p>\n\n<h3>⚠️ Dicas de Segurança</h3>\n<ul>\n<li><strong>Supervisão:</strong> Sempre supervisione atividades que envolvam objetos pequenos, líquidos ou ferramentas</li>\n<li><strong>Materiais:</strong> Use materiais não tóxicos e apropriados para a idade da criança</li>\n<li><strong>Espaço:</strong> Prepare um espaço seguro, livre de obstáculos e fácil de limpar</li>\n<li><strong>Proteção:</strong> Use aventais ou roupas velhas para atividades com tintas e colas</li>\n</ul>\n<h3>🔄 Variações da Atividade</h3><ul><li><strong>Para crianças mais novas:</strong> Simplifique as regras, reduza o tempo, ofereça mais ajuda</li><li><strong>Para crianças mais velhas:</strong> Aumente o desafio, adicione regras, incentive a autonomia</li><li><strong>Para fazer em grupo:</strong> Adapte para múltiplas crianças, crie times, promova cooperação</li><li><strong>Para dias chuvosos:</strong> Faça versão indoor, use materiais alternativos, adapte o espaço</li><li><strong>Para aprender mais:</strong> Relacione com conceitos educacionais, pesquise sobre o tema</li></ul>",
+  "imagem_prompt": "Criança de 5 anos explorando gelatina colorida com brinquedos pequenos em uma bandeja, ambiente doméstico, expressão de curiosidade e diversão, Ilustração infantil moderna, cores quentes e suaves, estilo educativo, sem telas, sem texto",
+  "recursos_online": {
+    "pesquisa_sugerida": "Gelatina Sensorial atividades infantis",
+    "categoria": "Atividades Sensoriais",
+    "palavras_chave": [
+      "lógica",
+      "foco",
+      "Atividades",
+      "Sensoriais",
+      "Linguagem"
+    ]
+  },
+  "enriquecido_em": "2026-03-08T23:53:18.253360Z",
+  "enriquecido_por": "OpenClaw - Juarez (Assistente)"
+}

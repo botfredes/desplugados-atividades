@@ -1,0 +1,30 @@
+{
+  "projeto": "Desplugados - Atividades para Crianças",
+  "versao": "1.0.0",
+  "data_atualizacao": "2026-03-09",
+  "estatisticas": {
+    "total_atividades": 143,
+    "categorias": 15,
+    "faixa_etaria_min": 3,
+    "faixa_etaria_max": 8,
+    "pontuacao_media_validacao": 92.2
+  },
+  "estrutura": {
+    "atividades_por_categoria": "atividades/por-categoria/",
+    "atividades_individuais": "atividades/individuais/",
+    "arquivos_resumo": "atividades/resumo/",
+    "scripts": "scripts/",
+    "documentacao": "docs/"
+  },
+  "scripts_disponiveis": {
+    "organizar": "python scripts/organizar_atividades.py",
+    "validar": "python scripts/validar_atividades.py",
+    "exportar_csv": "python scripts/exportar_csv.py --tipo analise"
+  },
+  "contato": {
+    "repositorio": "https://github.com/botfredes/desplugados",
+    "responsavel": "Juarez (Assistente OpenClaw)",
+    "manutencao": "Atualizações via scripts automatizados"
+  },
+  "licenca": "Dados originais do site Desplugados (https://desplugados.pages.dev/). Organização e enriquecimento para fins educacionais."
+}

@@ -1,0 +1,53 @@
+{
+  "id": 23,
+  "nome": "Olimpíadas Caseiras",
+  "categoria": "Desafios e Missões",
+  "faixa_etaria": "5-6 anos",
+  "tempo_entretenimento": "60+ min",
+  "nivel_bagunca": "Baixa",
+  "quantidade_materiais": "4-7 itens",
+  "tipo_atividade": "Moderada",
+  "energia_crianca": "Baixa",
+  "supervisao": "Moderada",
+  "local": "Interno",
+  "custo": "Grátis",
+  "preparo_adulto": "10-20 min",
+  "habilidade_desenvolvida": "Coordenação Motora",
+  "momento_ideal": "Tarde",
+  "clima": "Qualquer",
+  "nivel_criatividade": "Baixo",
+  "objetivo": "Desenvolver linguagem através de atividade prática",
+  "descricao": "A criança participa de uma série de atividades físicas adaptadas para dentro de casa, como corrida de saco e arremesso de bolinhas, promovendo diversão e desenvolvimento motor.",
+  "como_aplicar": "1. Organize um espaço seguro e livre de obstáculos. 2. Prepare atividades como corrida de saco, onde a criança pula dentro de um saco até a linha de chegada. 3. Realize arremessos de bolinhas em alvos improvisados, como baldes ou caixas. 4. Crie circuitos de obstáculos com almofadas e cadeiras para a criança percorrer. 5. Adapte as atividades conforme a idade e habilidades da criança, tornando-as mais desafiadoras ou simples conforme necessário.",
+  "materiais_necessarios": "Sacos de pano, bolinhas pequenas, baldes ou caixas, almofadas, cadeiras, fita adesiva para marcar áreas.",
+  "precisa_antecipacao": "Sim - 5 min",
+  "porque_e_boa": "Proporciona uma maneira divertida e segura de gastar energia em casa, mantendo a criança entretida e ativa por mais de uma hora.",
+  "o_que_resolve": "Criança entediada em dia de chuva pedindo tela, pais precisam de 60 minutos para trabalhar.",
+  "tags": [
+    "linguagem",
+    "coordenação motora",
+    "Coordenação Motora",
+    "Desafios",
+    "lógica",
+    "criatividade",
+    "Missões"
+  ],
+  "created_at": "2026-02-17 22:18:57.770589+00",
+  "imagem_url": "/imagens/atividade-23.png",
+  "resumo_pais": "Atividade física adaptada para dentro de casa, mantendo a criança ativa e entretida por mais de uma hora.",
+  "descricao_html": "<h3>O que é essa atividade?</h3><p>A criança participa de uma série de atividades físicas adaptadas para dentro de casa, como corrida de saco e arremesso de bolinhas, promovendo diversão e desenvolvimento motor.</p><h3>Como fazer em casa</h3><ol><li><strong>Prepare o espaço:</strong> Organize um ambiente seguro e livre de obstáculos, utilizando almofadas e cadeiras para delimitar áreas e criar obstáculos.</li><li><strong>Corrida de saco:</strong> Forneça um saco de pano resistente para a criança. Explique que ela deve entrar no saco e pular até a linha de chegada. Para aumentar a diversão, crie uma linha de chegada com fita adesiva no chão.</li><li><strong>Arremesso de bolinhas:</strong> Coloque baldes ou caixas em diferentes distâncias e peça para a criança arremessar bolinhas pequenas dentro deles. Varie a distância e a altura dos alvos para aumentar o desafio.</li><li><strong>Circuito de obstáculos:</strong> Utilize almofadas e cadeiras para criar um percurso que a criança deve percorrer, pulando, rastejando ou contornando os obstáculos. Marque o início e o fim com fita adesiva.</li><li><strong>Adapte as atividades:</strong> Para crianças mais novas, reduza a complexidade dos obstáculos e ofereça mais assistência. Para crianças mais velhas, aumente a dificuldade, adicionando mais obstáculos ou cronometrando o tempo para completar o circuito.</li></ol><h3>Dica para os pais</h3><p>Se a criança se cansar de uma atividade, ofereça uma pausa com água e, em seguida, inicie uma nova atividade para manter o interesse e a energia.</p>\n<h3>📚 Recursos Extras para Enriquecer a Atividade</h3>\n<p>Para tornar esta atividade ainda mais completa, sugerimos:</p>\n<ul>\n<li><strong>Materiais adicionais:</strong> Considere ter à mão itens relacionados à desafios e missões</li>\n<li><strong>Preparação antecipada:</strong> 30+ min são suficientes para organizar tudo</li>\n<li><strong>Adaptações:</strong> A atividade pode ser simplificada para crianças mais novas ou complexificada para mais velhas</li>\n</ul>\n<p><em>Dica:</em> Pesquise online por \"Olimpíadas Caseiras\" + \"atividades infantis\" para mais inspirações.</p>\n\n<h3>⚠️ Dicas de Segurança</h3>\n<ul>\n<li><strong>Supervisão:</strong> Sempre supervisione atividades que envolvam objetos pequenos, líquidos ou ferramentas</li>\n<li><strong>Materiais:</strong> Use materiais não tóxicos e apropriados para a idade da criança</li>\n<li><strong>Espaço:</strong> Prepare um espaço seguro, livre de obstáculos e fácil de limpar</li>\n<li><strong>Proteção:</strong> Use aventais ou roupas velhas para atividades com tintas e colas</li>\n</ul>\n<h3>🔄 Variações da Atividade</h3><ul><li><strong>Para crianças mais novas:</strong> Simplifique as regras, reduza o tempo, ofereça mais ajuda</li><li><strong>Para crianças mais velhas:</strong> Aumente o desafio, adicione regras, incentive a autonomia</li><li><strong>Para fazer em grupo:</strong> Adapte para múltiplas crianças, crie times, promova cooperação</li><li><strong>Para dias chuvosos:</strong> Faça versão indoor, use materiais alternativos, adapte o espaço</li><li><strong>Para aprender mais:</strong> Relacione com conceitos educacionais, pesquise sobre o tema</li></ul>",
+  "imagem_prompt": "Criança de 5 anos pulando dentro de um saco de pano em uma sala de estar, sorrindo, ambiente interno, emoção de diversão, Ilustração infantil moderna, cores quentes e suaves, estilo educativo, sem telas, sem texto",
+  "recursos_online": {
+    "pesquisa_sugerida": "Olimpíadas Caseiras atividades infantis",
+    "categoria": "Desafios e Missões",
+    "palavras_chave": [
+      "lógica",
+      "coordenação motora",
+      "criatividade",
+      "linguagem",
+      "Desafios"
+    ]
+  },
+  "enriquecido_em": "2026-03-08T23:53:18.247330Z",
+  "enriquecido_por": "OpenClaw - Juarez (Assistente)"
+}

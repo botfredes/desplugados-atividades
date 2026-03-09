@@ -1,0 +1,53 @@
+{
+  "id": 1,
+  "nome": "Teatro de Sombras Chinesas",
+  "categoria": "Dramatização e Faz de Conta",
+  "faixa_etaria": "3-8 anos",
+  "tempo_entretenimento": "20-40 min",
+  "nivel_bagunca": "Média",
+  "quantidade_materiais": "1-3 itens",
+  "tipo_atividade": "Moderada",
+  "energia_crianca": "Baixa",
+  "supervisao": "Nenhuma",
+  "local": "Qualquer",
+  "custo": "Baixo (até R$10)",
+  "preparo_adulto": "5 min",
+  "habilidade_desenvolvida": "Autonomia",
+  "momento_ideal": "Noite",
+  "clima": "Chuva",
+  "nivel_criatividade": "Muito Alto",
+  "objetivo": "Desenvolver narrativa, imaginação e coordenação motora fina",
+  "descricao": "Crie histórias mágicas usando apenas luz e as mãos",
+  "como_aplicar": "Em um quarto escuro, posicione uma lanterna ou abajur contra a parede. Mostre formas básicas com as mãos (cachorro, pássaro, coelho). Depois, deixe a criança criar suas próprias formas e inventar histórias.",
+  "materiais_necessarios": "Lanterna ou abajur, parede clara, opcional: cartolina para criar personagens recortados",
+  "precisa_antecipacao": "Sim - 5 min",
+  "porque_e_boa": "Estimula criatividade narrativa sem necessidade de materiais caros",
+  "o_que_resolve": "Criança entediada no fim do dia, transição para hora de dormir",
+  "tags": [
+    "linguagem",
+    "Autonomia",
+    "Dramatização",
+    "Conta",
+    "independência",
+    "criatividade",
+    "foco"
+  ],
+  "created_at": "2026-02-17 22:18:57.770589+00",
+  "imagem_url": "/imagens/atividade-1.png",
+  "resumo_pais": "Atividade tranquila para a noite que estimula a imaginação e ajuda a acalmar a criança antes de dormir, evitando tédio e agitação.",
+  "descricao_html": "<h3>O que é essa atividade?</h3><p>O Teatro de Sombras Chinesas é uma brincadeira simples e mágica onde a criança usa as mãos para criar formas e contar histórias com luz e sombra, transformando um quarto escuro em um palco de imaginação.</p><h3>Quando essa atividade é ideal?</h3><ul><li><strong>Faixa etária:</strong> 3-8 anos</li><li><strong>Tempo médio:</strong> 20 a 40 minutos</li><li><strong>Nível de energia da criança:</strong> baixo, ideal para momentos de calma</li><li><strong>Nível de bagunça:</strong> médio, pois envolve movimentação das mãos e criação de formas</li><li><strong>Supervisão:</strong> nenhuma, a criança pode brincar sozinha ou com pouca ajuda</li><li><strong>Momento ideal:</strong> à noite, especialmente em dias de chuva ou quando a rotina pede tranquilidade</li></ul><h3>O que essa atividade desenvolve?</h3><ul><li>Autonomia: a criança cria suas próprias histórias e formas com as mãos</li><li>Imaginação e criatividade: inventar personagens e narrativas usando sombras</li><li>Coordenação motora fina: ao moldar as mãos para formar figuras</li></ul><h3>Como fazer em casa</h3><p>Escolha um quarto escuro e posicione uma lanterna ou abajur apontando para uma parede clara. Mostre para a criança formas simples com as mãos, como cachorro, pássaro ou coelho. Depois, incentive-a a criar suas próprias figuras e inventar histórias para elas. Se quiser, use recortes de cartolina para personagens extras.</p><h3>Por que os pais gostam dessa atividade</h3><ul><li><strong>Ajuda a acalmar a criança no fim do dia</strong>, facilitando a transição para a hora de dormir</li><li><strong>Estimula a criatividade sem precisar de materiais caros</strong></li><li>Ocupa a criança de forma tranquila, reduzindo o tédio e a agitação</li></ul><h3>Dica para os pais</h3><p><em>Não se preocupe se no começo a criança precisar de ajuda para criar as formas; com o tempo ela vai ganhar confiança e autonomia para inventar suas próprias histórias.</em></p>\n<h3>📚 Recursos Extras para Enriquecer a Atividade</h3>\n<p>Para tornar esta atividade ainda mais completa, sugerimos:</p>\n<ul>\n<li><strong>Materiais adicionais:</strong> Considere ter à mão itens relacionados à dramatização e faz de conta</li>\n<li><strong>Preparação antecipada:</strong> 5 min são suficientes para organizar tudo</li>\n<li><strong>Adaptações:</strong> A atividade pode ser simplificada para crianças mais novas ou complexificada para mais velhas</li>\n</ul>\n<p><em>Dica:</em> Pesquise online por \"Teatro de Sombras Chinesas\" + \"atividades infantis\" para mais inspirações.</p>\n\n<h3>⚠️ Dicas de Segurança</h3>\n<ul>\n<li><strong>Supervisão:</strong> Sempre supervisione atividades que envolvam objetos pequenos, líquidos ou ferramentas</li>\n<li><strong>Materiais:</strong> Use materiais não tóxicos e apropriados para a idade da criança</li>\n<li><strong>Espaço:</strong> Prepare um espaço seguro, livre de obstáculos e fácil de limpar</li>\n<li><strong>Proteção:</strong> Use aventais ou roupas velhas para atividades com tintas e colas</li>\n</ul>\n<h3>🔄 Variações da Atividade</h3><ul><li><strong>Para crianças mais novas:</strong> Simplifique as regras, reduza o tempo, ofereça mais ajuda</li><li><strong>Para crianças mais velhas:</strong> Aumente o desafio, adicione regras, incentive a autonomia</li><li><strong>Para fazer em grupo:</strong> Adapte para múltiplas crianças, crie times, promova cooperação</li><li><strong>Para dias chuvosos:</strong> Faça versão indoor, use materiais alternativos, adapte o espaço</li><li><strong>Para aprender mais:</strong> Relacione com conceitos educacionais, pesquise sobre o tema</li></ul>",
+  "imagem_prompt": "Ilustração infantil moderna de uma criança de aproximadamente 5 anos concentrada fazendo formas com as mãos para um teatro de sombras em um quarto escuro, expressão calma e curiosa, ambiente acolhedor com luz suave de lanterna ou abajur, cores quentes e suaves, estilo educativo e acolhedor, sem telas, sem texto.",
+  "recursos_online": {
+    "pesquisa_sugerida": "Teatro de Sombras Chinesas atividades infantis",
+    "categoria": "Dramatização e Faz de Conta",
+    "palavras_chave": [
+      "criatividade",
+      "foco",
+      "independência",
+      "linguagem",
+      "Dramatização"
+    ]
+  },
+  "enriquecido_em": "2026-03-08T23:53:18.245442Z",
+  "enriquecido_por": "OpenClaw - Juarez (Assistente)"
+}

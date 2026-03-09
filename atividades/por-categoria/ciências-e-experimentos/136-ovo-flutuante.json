@@ -1,0 +1,52 @@
+{
+  "id": 136,
+  "nome": "Ovo Flutuante",
+  "categoria": "Ciências e Experimentos",
+  "faixa_etaria": "5-6 anos",
+  "tempo_entretenimento": "60+ min",
+  "nivel_bagunca": "Baixa",
+  "quantidade_materiais": "4-7 itens",
+  "tipo_atividade": "Ativa",
+  "energia_crianca": "Baixa",
+  "supervisao": "Moderada",
+  "local": "Interno",
+  "custo": "Grátis",
+  "preparo_adulto": "5-15 min",
+  "habilidade_desenvolvida": "Autonomia",
+  "momento_ideal": "Tarde",
+  "clima": "Qualquer",
+  "nivel_criatividade": "Baixo",
+  "objetivo": "Desenvolver foco através de atividade prática",
+  "descricao": "A criança realiza o experimento 'Ovo Flutuante', observando como a densidade da água afeta o comportamento de um ovo.",
+  "como_aplicar": "Encha dois copos com água até a metade. Em um deles, adicione 6 colheres de sopa de sal e mexa até dissolver. Coloque um ovo em cada copo e observe: no copo com água salgada, o ovo flutua; no copo com água pura, o ovo afunda.",
+  "materiais_necessarios": "2 copos transparentes, 2 ovos crus, 6 colheres de sopa de sal, colher para mexer",
+  "precisa_antecipacao": "Sim - 5 min",
+  "porque_e_boa": "Esta atividade mantém a criança concentrada por até 30 minutos com supervisão moderada, proporcionando uma experiência educativa e divertida.",
+  "o_que_resolve": "Criança entediada em dia de chuva pedindo tela, pais precisam de 30 min para trabalhar",
+  "tags": [
+    "coordenação motora",
+    "Experimentos",
+    "autonomia",
+    "Autonomia",
+    "Ciências",
+    "criatividade"
+  ],
+  "created_at": "2026-02-17 22:18:58.860826+00",
+  "imagem_url": "/imagens/atividade-136.png",
+  "resumo_pais": "Experimento simples que ensina sobre densidade, ideal para dias chuvosos, mantendo a criança ocupada e aprendendo.",
+  "descricao_html": "<h3>O que é essa atividade?</h3><p>Na atividade 'Ovo Flutuante', a criança explora como a densidade da água influencia o comportamento de um ovo, realizando um experimento simples e educativo.</p><h3>Como fazer em casa</h3><ol><li><strong>Preparar os copos:</strong> Encha dois copos transparentes com água até a metade. Certifique-se de que os copos sejam grandes o suficiente para acomodar um ovo inteiro.</li><li><strong>Adicionar sal:</strong> Em um dos copos, adicione 6 colheres de sopa de sal e mexa bem até que o sal se dissolva completamente. Isso cria uma solução salina mais densa.</li><li><strong>Colocar os ovos:</strong> Coloque um ovo em cada copo. Observe que no copo com água pura, o ovo afunda, enquanto no copo com a solução salina, o ovo flutua devido à maior densidade da água salgada.</li><li><strong>Observar e discutir:</strong> Pergunte à criança por que o ovo flutua em um copo e afunda no outro, incentivando-a a pensar sobre o conceito de densidade e como ela afeta os objetos na água.</li></ol><h3>Variações e ideias</h3><ul><li><strong>Experimento com diferentes líquidos:</strong> Substitua a água por outros líquidos, como óleo ou detergente, para observar como diferentes densidades afetam o comportamento do ovo.</li><li><strong>Adicionar mais sal:</strong> Aumente a quantidade de sal na solução para ver se o ovo flutua mais alto ou até mesmo fica completamente na superfície.</li><li><strong>Usar ovos de diferentes tamanhos:</strong> Experimente com ovos maiores ou menores para ver se o tamanho do ovo influencia sua flutuação.</li><li><strong>Adicionar corante alimentício:</strong> Coloque algumas gotas de corante na água para tornar o experimento mais visual e interessante para a criança.</li><li><strong>Comparar com outros objetos:</strong> Teste outros objetos, como bolinhas de pingue-pongue ou pedaços de madeira, para ver se flutuam ou afundam na mesma solução.</li></ul><h3>Dica para os pais</h3><p>Se a criança tiver dificuldade em entender o conceito de densidade, explique que é como o peso de um líquido. Quanto mais pesado o líquido, mais fácil é para o ovo flutuar. Use exemplos do dia a dia, como comparar a água com o mel, que é mais espesso e pesado.</p>\n<h3>📚 Recursos Extras para Enriquecer a Atividade</h3>\n<p>Para tornar esta atividade ainda mais completa, sugerimos:</p>\n<ul>\n<li><strong>Materiais adicionais:</strong> Considere ter à mão itens relacionados à ciências e experimentos</li>\n<li><strong>Preparação antecipada:</strong> 30+ min são suficientes para organizar tudo</li>\n<li><strong>Adaptações:</strong> A atividade pode ser simplificada para crianças mais novas ou complexificada para mais velhas</li>\n</ul>\n<p><em>Dica:</em> Pesquise online por \"Ovo Flutuante\" + \"atividades infantis\" para mais inspirações.</p>\n\n<h3>⚠️ Dicas de Segurança</h3>\n<ul>\n<li><strong>Supervisão:</strong> Sempre supervisione atividades que envolvam objetos pequenos, líquidos ou ferramentas</li>\n<li><strong>Materiais:</strong> Use materiais não tóxicos e apropriados para a idade da criança</li>\n<li><strong>Espaço:</strong> Prepare um espaço seguro, livre de obstáculos e fácil de limpar</li>\n<li><strong>Proteção:</strong> Use aventais ou roupas velhas para atividades com tintas e colas</li>\n</ul>\n<h3>🔄 Variações da Atividade</h3><ul><li><strong>Para crianças mais novas:</strong> Simplifique as regras, reduza o tempo, ofereça mais ajuda</li><li><strong>Para crianças mais velhas:</strong> Aumente o desafio, adicione regras, incentive a autonomia</li><li><strong>Para fazer em grupo:</strong> Adapte para múltiplas crianças, crie times, promova cooperação</li><li><strong>Para dias chuvosos:</strong> Faça versão indoor, use materiais alternativos, adapte o espaço</li><li><strong>Para aprender mais:</strong> Relacione com conceitos educacionais, pesquise sobre o tema</li></ul>",
+  "imagem_prompt": "Criança de 5 anos observando ovos em copos com água e solução salina, em uma mesa de cozinha, surpresa e curiosa, Ilustração infantil moderna, cores quentes e suaves, estilo educativo, sem telas, sem texto",
+  "recursos_online": {
+    "pesquisa_sugerida": "Ovo Flutuante atividades infantis",
+    "categoria": "Ciências e Experimentos",
+    "palavras_chave": [
+      "criatividade",
+      "coordenação motora",
+      "autonomia",
+      "Ciências",
+      "Experimentos"
+    ]
+  },
+  "enriquecido_em": "2026-03-08T23:53:18.253608Z",
+  "enriquecido_por": "OpenClaw - Juarez (Assistente)"
+}

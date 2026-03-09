@@ -1,0 +1,53 @@
+{
+  "id": 12,
+  "nome": "Argila Natural",
+  "categoria": "Atividades Sensoriais",
+  "faixa_etaria": "7-8 anos",
+  "tempo_entretenimento": "40-60 min",
+  "nivel_bagunca": "Alta",
+  "quantidade_materiais": "8+ itens",
+  "tipo_atividade": "Muito Ativa",
+  "energia_crianca": "Média",
+  "supervisao": "Nenhuma",
+  "local": "Qualquer",
+  "custo": "Grátis",
+  "preparo_adulto": "10-15 min",
+  "habilidade_desenvolvida": "Sensorial",
+  "momento_ideal": "Tarde",
+  "clima": "Chuva",
+  "nivel_criatividade": "Médio",
+  "objetivo": "Desenvolver socialização através de atividade prática",
+  "descricao": "A criança modela figuras e objetos usando argila natural, explorando sua criatividade e habilidades motoras finas.",
+  "como_aplicar": "Forre a mesa com jornal para proteger a superfície. Dê à criança uma porção de argila e incentive-a a criar formas simples, como animais ou objetos do cotidiano. Se necessário, umedeça as mãos para facilitar a modelagem. Após a criação, deixe as peças secarem ao ar livre por 24 horas. Quando secas, pinte-as com tinta guache ou plástica, utilizando pincéis e diversas cores. Deixe secar novamente antes de manusear.",
+  "materiais_necessarios": "Argila natural, tinta guache ou plástica (diversas cores), pincéis, jornal para forrar a mesa, recipiente com água, toalha ou pano para secar as mãos (tinta guache, pincéis, potinhos para misturar)",
+  "precisa_antecipacao": "Não",
+  "porque_e_boa": "Mantém a criança concentrada por até 60 minutos com pouca supervisão, e o resultado visual dá orgulho — ela vai querer mostrar para todo mundo",
+  "o_que_resolve": "Criança entediada em dia de chuva pedindo tela, pais precisam de 30 min para trabalhar",
+  "tags": [
+    "coordenação motora",
+    "Sensoriais",
+    "socialização",
+    "Atividades",
+    "independência",
+    "lógica",
+    "Sensorial"
+  ],
+  "created_at": "2026-02-17 22:18:57.770589+00",
+  "imagem_url": "/imagens/atividade-12.png",
+  "resumo_pais": "Atividade de modelagem com argila que mantém a criança ocupada e desenvolve habilidades motoras finas.",
+  "descricao_html": "<h3>O que é essa atividade?</h3><p>A criança utiliza argila natural para criar figuras e objetos, estimulando sua criatividade e habilidades motoras finas.</p><h3>Como fazer em casa</h3><ol><li><strong>Prepare o ambiente:</strong> Forre a mesa com jornal para proteger a superfície e facilitar a limpeza posterior.</li><li><strong>Distribua a argila:</strong> Dê à criança uma porção de argila natural, suficiente para suas criações. Se a argila estiver muito seca, umedeça levemente as mãos para amolecê-la.</li><li><strong>Incentive a modelagem:</strong> Sugira que a criança crie formas simples, como animais (por exemplo, um porquinho ou uma cobrinha) ou objetos do cotidiano (como uma flor ou uma xícara). Explique que, com uma bola de argila, é possível fazer formas simples de animais, como galinhas e peixes. </li><li><strong>Deixe secar:</strong> Após a modelagem, coloque as peças em um local arejado e seco. Deixe-as secarem ao ar livre por 24 horas ou até que estejam completamente duras. </li><li><strong>Pinte as criações:</strong> Quando as peças estiverem secas, pinte-as com tinta guache ou plástica, utilizando pincéis e diversas cores. Deixe secar novamente antes de manusear. </li></ol><h3>Variações e ideias</h3><ul><li><strong>Exploração sensorial:</strong> Misture diferentes tipos de argila para que a criança explore as variações de textura e cor. </li><li><strong>Criação de personagens:</strong> Modele personagens de contos de fadas ou histórias favoritas da criança, incentivando a narrativa e a imaginação. </li><li><strong>Construção de cenários:</strong> Crie pequenos cenários, como fazendas ou cidades, para que a criança desenvolva habilidades de planejamento e narrativa. </li></ul><h3>Dica para os pais</h3><p>Se a argila estiver muito seca, umedeça levemente as mãos para amolecê-la. Caso sobre argila, envolva-a em jornal e borrife água diariamente para mantê-la úmida até a próxima utilização. </p>\n<h3>📚 Recursos Extras para Enriquecer a Atividade</h3>\n<p>Para tornar esta atividade ainda mais completa, sugerimos:</p>\n<ul>\n<li><strong>Materiais adicionais:</strong> Considere ter à mão itens relacionados à atividades sensoriais</li>\n<li><strong>Preparação antecipada:</strong> 10-15 min são suficientes para organizar tudo</li>\n<li><strong>Adaptações:</strong> A atividade pode ser simplificada para crianças mais novas ou complexificada para mais velhas</li>\n</ul>\n<p><em>Dica:</em> Pesquise online por \"Argila Natural\" + \"atividades infantis\" para mais inspirações.</p>\n\n<h3>⚠️ Dicas de Segurança</h3>\n<ul>\n<li><strong>Supervisão:</strong> Sempre supervisione atividades que envolvam objetos pequenos, líquidos ou ferramentas</li>\n<li><strong>Materiais:</strong> Use materiais não tóxicos e apropriados para a idade da criança</li>\n<li><strong>Espaço:</strong> Prepare um espaço seguro, livre de obstáculos e fácil de limpar</li>\n<li><strong>Proteção:</strong> Use aventais ou roupas velhas para atividades com tintas e colas</li>\n</ul>\n<h3>🔄 Variações da Atividade</h3><ul><li><strong>Para crianças mais novas:</strong> Simplifique as regras, reduza o tempo, ofereça mais ajuda</li><li><strong>Para crianças mais velhas:</strong> Aumente o desafio, adicione regras, incentive a autonomia</li><li><strong>Para fazer em grupo:</strong> Adapte para múltiplas crianças, crie times, promova cooperação</li><li><strong>Para dias chuvosos:</strong> Faça versão indoor, use materiais alternativos, adapte o espaço</li><li><strong>Para aprender mais:</strong> Relacione com conceitos educacionais, pesquise sobre o tema</li></ul>",
+  "imagem_prompt": "Criança de 8 anos modelando figuras de argila natural em uma mesa forrada com jornal, sorrindo, em um ambiente interno, ilustração infantil moderna, cores quentes e suaves, estilo educativo, sem telas, sem texto",
+  "recursos_online": {
+    "pesquisa_sugerida": "Argila Natural atividades infantis",
+    "categoria": "Atividades Sensoriais",
+    "palavras_chave": [
+      "coordenação motora",
+      "independência",
+      "lógica",
+      "socialização",
+      "Atividades"
+    ]
+  },
+  "enriquecido_em": "2026-03-08T23:53:18.246593Z",
+  "enriquecido_por": "OpenClaw - Juarez (Assistente)"
+}

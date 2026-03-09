@@ -1,0 +1,53 @@
+{
+  "id": 89,
+  "nome": "Acampamento na Sala",
+  "categoria": "Atividades de Conexão",
+  "faixa_etaria": "3-8 anos",
+  "tempo_entretenimento": "20-40 min",
+  "nivel_bagunca": "Alta",
+  "quantidade_materiais": "4-7 itens",
+  "tipo_atividade": "Silenciosa",
+  "energia_crianca": "Média",
+  "supervisao": "Constante",
+  "local": "Externo",
+  "custo": "Baixo (até R$10)",
+  "preparo_adulto": "5-10 min",
+  "habilidade_desenvolvida": "Coordenação Motora",
+  "momento_ideal": "Manhã",
+  "clima": "Qualquer",
+  "nivel_criatividade": "Alto",
+  "objetivo": "Desenvolver foco através de atividade prática",
+  "descricao": "A criança monta uma cabana improvisada na sala, usando lençóis e almofadas, criando um espaço aconchegante para brincar de acampamento.",
+  "como_aplicar": "Escolha um local espaçoso na sala, cubra cadeiras ou móveis com lençóis para formar a estrutura da cabana, adicione almofadas e cobertores para conforto, e decore com brinquedos e livros para enriquecer a brincadeira.",
+  "materiais_necessarios": "Lençóis, almofadas, cobertores, brinquedos, livros, cadeiras ou móveis para suporte",
+  "precisa_antecipacao": "Sim - 5 min",
+  "porque_e_boa": "Proporciona um ambiente lúdico que estimula a imaginação e fortalece os laços familiares, mantendo as crianças entretidas sem a necessidade de telas.",
+  "o_que_resolve": "Criança entediada em dia de chuva pedindo tela, pais precisam de 30 min para trabalhar",
+  "tags": [
+    "socialização",
+    "Coordenação Motora",
+    "Conexão",
+    "Atividades",
+    "lógica",
+    "criatividade",
+    "foco"
+  ],
+  "created_at": "2026-02-17 22:18:58.228534+00",
+  "imagem_url": "/imagens/atividade-129.png",
+  "resumo_pais": "Transforme a sala em uma cabana improvisada para um acampamento divertido e sem telas.",
+  "descricao_html": "<h3>O que é essa atividade?</h3><p>A criança monta uma cabana improvisada na sala, usando lençóis e almofadas, criando um espaço aconchegante para brincar de acampamento.</p><h3>Como fazer em casa</h3><ol><li><strong>Escolha o local:</strong> Selecione um espaço amplo na sala, como perto de um sofá ou em um canto livre, para montar a cabana.</li><li><strong>Monte a estrutura:</strong> Dobre cadeiras ou móveis para formar a base da cabana. Coloque lençóis sobre eles, deixando as extremidades caídas para criar as paredes e o teto.</li><li><strong>Adicione conforto:</strong> Coloque almofadas e cobertores dentro da cabana para torná-la acolhedora. Isso cria um ambiente confortável para a criança brincar ou descansar.</li><li><strong>Decore o interior:</strong> Coloque brinquedos, livros e outros itens que a criança goste dentro da cabana. Isso incentiva a brincadeira e a imaginação.</li><li><strong>Ilumine suavemente:</strong> Se desejar, use uma lanterna ou luz suave para criar um clima de acampamento. Evite luzes fortes que possam incomodar.</li><li><strong>Participe da brincadeira:</strong> Junte-se à criança na cabana, conte histórias, leia livros ou brinque com os brinquedos. Isso fortalece os laços familiares e torna a experiência mais divertida.</li></ol><h3>Dica para os pais</h3><p>Se a criança tiver dificuldade em montar a cabana sozinha, ofereça ajuda, mas incentive-a a participar ativamente do processo. Isso promove a autonomia e o senso de realização.</p>\n<h3>📚 Recursos Extras para Enriquecer a Atividade</h3>\n<p>Para tornar esta atividade ainda mais completa, sugerimos:</p>\n<ul>\n<li><strong>Materiais adicionais:</strong> Considere ter à mão itens relacionados à atividades de conexão</li>\n<li><strong>Preparação antecipada:</strong> Nenhum são suficientes para organizar tudo</li>\n<li><strong>Adaptações:</strong> A atividade pode ser simplificada para crianças mais novas ou complexificada para mais velhas</li>\n</ul>\n<p><em>Dica:</em> Pesquise online por \"Acampamento na Sala\" + \"atividades infantis\" para mais inspirações.</p>\n\n<h3>⚠️ Dicas de Segurança</h3>\n<ul>\n<li><strong>Supervisão:</strong> Sempre supervisione atividades que envolvam objetos pequenos, líquidos ou ferramentas</li>\n<li><strong>Materiais:</strong> Use materiais não tóxicos e apropriados para a idade da criança</li>\n<li><strong>Espaço:</strong> Prepare um espaço seguro, livre de obstáculos e fácil de limpar</li>\n<li><strong>Proteção:</strong> Use aventais ou roupas velhas para atividades com tintas e colas</li>\n</ul>\n<h3>🔄 Variações da Atividade</h3><ul><li><strong>Para crianças mais novas:</strong> Simplifique as regras, reduza o tempo, ofereça mais ajuda</li><li><strong>Para crianças mais velhas:</strong> Aumente o desafio, adicione regras, incentive a autonomia</li><li><strong>Para fazer em grupo:</strong> Adapte para múltiplas crianças, crie times, promova cooperação</li><li><strong>Para dias chuvosos:</strong> Faça versão indoor, use materiais alternativos, adapte o espaço</li><li><strong>Para aprender mais:</strong> Relacione com conceitos educacionais, pesquise sobre o tema</li></ul>",
+  "imagem_prompt": "Criança de 5 anos montando uma cabana improvisada com lençóis e almofadas na sala de estar, sorrindo, ambiente acolhedor, Ilustração infantil moderna, cores quentes e suaves, estilo educativo, sem telas, sem texto",
+  "recursos_online": {
+    "pesquisa_sugerida": "Acampamento na Sala atividades infantis",
+    "categoria": "Atividades de Conexão",
+    "palavras_chave": [
+      "socialização",
+      "lógica",
+      "criatividade",
+      "foco",
+      "Atividades"
+    ]
+  },
+  "enriquecido_em": "2026-03-08T23:53:18.251725Z",
+  "enriquecido_por": "OpenClaw - Juarez (Assistente)"
+}

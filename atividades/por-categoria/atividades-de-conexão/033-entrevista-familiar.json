@@ -1,0 +1,53 @@
+{
+  "id": 33,
+  "nome": "Entrevista Familiar",
+  "categoria": "Atividades de Conexão",
+  "faixa_etaria": "7-8 anos",
+  "tempo_entretenimento": "10-20 min",
+  "nivel_bagunca": "Baixa",
+  "quantidade_materiais": "4-7 itens",
+  "tipo_atividade": "Silenciosa",
+  "energia_crianca": "Qualquer",
+  "supervisao": "Moderada",
+  "local": "Interno",
+  "custo": "Grátis",
+  "preparo_adulto": "5 min",
+  "habilidade_desenvolvida": "Linguagem",
+  "momento_ideal": "Manhã",
+  "clima": "Chuva",
+  "nivel_criatividade": "Baixo",
+  "objetivo": "Desenvolver linguagem através de atividade prática",
+  "descricao": "A criança entrevista um membro da família sobre sua infância, desenvolvendo habilidades de linguagem e comunicação.",
+  "como_aplicar": "1. Prepare um roteiro de perguntas simples sobre a infância do entrevistado. 2. Explique à criança como conduzir a entrevista, incentivando-a a ouvir atentamente e fazer anotações. 3. Após a entrevista, peça para a criança compartilhar o que aprendeu com a família.",
+  "materiais_necessarios": "Roteiro de perguntas, bloco de anotações, caneta, câmera fotográfica ou celular com câmera",
+  "precisa_antecipacao": "Sim - 30 min",
+  "porque_e_boa": "Mantém a criança engajada em uma atividade educativa que fortalece os laços familiares e melhora suas habilidades de comunicação.",
+  "o_que_resolve": "Criança entediada em dia de chuva, pais precisam de 30 min para trabalhar",
+  "tags": [
+    "linguagem",
+    "Linguagem",
+    "autonomia",
+    "Conexão",
+    "Atividades",
+    "lógica",
+    "criatividade"
+  ],
+  "created_at": "2026-02-17 22:18:57.770589+00",
+  "imagem_url": "/imagens/atividade-41.png",
+  "resumo_pais": "Atividade educativa que mantém a criança engajada enquanto fortalece os laços familiares e melhora suas habilidades de comunicação.",
+  "descricao_html": "<h3>O que é essa atividade?</h3><p>A criança realiza uma entrevista com um membro da família sobre sua infância, desenvolvendo habilidades de linguagem e comunicação.</p><h3>Como fazer em casa</h3><ol><li><strong>Prepare o roteiro de perguntas:</strong> Elabore uma lista de perguntas simples sobre a infância do entrevistado, como \"Qual é a sua lembrança mais antiga?\" ou \"Quais brincadeiras você gostava de fazer quando era criança?\". </li><li><strong>Explique o processo para a criança:</strong> Oriente-a sobre como conduzir a entrevista, incentivando-a a ouvir atentamente e fazer anotações. Explique que ela pode usar uma câmera ou celular para registrar a conversa, se desejar. </li><li><strong>Realize a entrevista:</strong> No momento combinado, a criança faz as perguntas ao membro da família escolhido, ouvindo as respostas e anotando ou gravando as informações. </li><li><strong>Compartilhe os aprendizados:</strong> Após a entrevista, peça para a criança compartilhar o que aprendeu com a família, incentivando a comunicação e o fortalecimento dos laços familiares. </li></ol><h3>Variações e ideias</h3><ul><li><strong>Entrevista com diferentes membros da família:</strong> A criança pode entrevistar pais, avós, tios ou outros familiares para obter diversas perspectivas sobre a infância.</li><li><strong>Criação de um mural familiar:</strong> Após as entrevistas, a criança pode criar um mural na sala de estar com fotos e histórias compartilhadas pelos familiares. </li><li><strong>Registro em vídeo:</strong> Se possível, grave a entrevista em vídeo para que a criança possa assistir posteriormente e compartilhar com outros membros da família.</li><li><strong>Entrevista com amigos da família:</strong> Se não houver familiares disponíveis, a criança pode entrevistar amigos próximos da família para aprender sobre diferentes experiências de infância.</li><li><strong>Criação de uma história em quadrinhos:</strong> A criança pode transformar as histórias ouvidas em uma história em quadrinhos, estimulando a criatividade e a expressão artística. </li></ul><h3>Dica para os pais</h3><p>Se a criança se sentir tímida ou insegura, ofereça apoio durante a entrevista, ajudando-a a formular perguntas ou incentivando-a a ouvir atentamente. Lembre-se de que o objetivo é que a criança se sinta confortável e aprenda com a experiência.</p>\n<h3>📚 Recursos Extras para Enriquecer a Atividade</h3>\n<p>Para tornar esta atividade ainda mais completa, sugerimos:</p>\n<ul>\n<li><strong>Materiais adicionais:</strong> Considere ter à mão itens relacionados à atividades de conexão</li>\n<li><strong>Preparação antecipada:</strong> 5 min são suficientes para organizar tudo</li>\n<li><strong>Adaptações:</strong> A atividade pode ser simplificada para crianças mais novas ou complexificada para mais velhas</li>\n</ul>\n<p><em>Dica:</em> Pesquise online por \"Entrevista Familiar\" + \"atividades infantis\" para mais inspirações.</p>\n\n<h3>⚠️ Dicas de Segurança</h3>\n<ul>\n<li><strong>Supervisão:</strong> Sempre supervisione atividades que envolvam objetos pequenos, líquidos ou ferramentas</li>\n<li><strong>Materiais:</strong> Use materiais não tóxicos e apropriados para a idade da criança</li>\n<li><strong>Espaço:</strong> Prepare um espaço seguro, livre de obstáculos e fácil de limpar</li>\n<li><strong>Proteção:</strong> Use aventais ou roupas velhas para atividades com tintas e colas</li>\n</ul>\n<h3>🔄 Variações da Atividade</h3><ul><li><strong>Para crianças mais novas:</strong> Simplifique as regras, reduza o tempo, ofereça mais ajuda</li><li><strong>Para crianças mais velhas:</strong> Aumente o desafio, adicione regras, incentive a autonomia</li><li><strong>Para fazer em grupo:</strong> Adapte para múltiplas crianças, crie times, promova cooperação</li><li><strong>Para dias chuvosos:</strong> Faça versão indoor, use materiais alternativos, adapte o espaço</li><li><strong>Para aprender mais:</strong> Relacione com conceitos educacionais, pesquise sobre o tema</li></ul>",
+  "imagem_prompt": "Criança de 7 anos entrevistando avô sobre sua infância na sala de estar, ambos sorrindo e interagindo, ilustração infantil moderna, cores quentes e suaves, estilo educativo, sem telas, sem texto",
+  "recursos_online": {
+    "pesquisa_sugerida": "Entrevista Familiar atividades infantis",
+    "categoria": "Atividades de Conexão",
+    "palavras_chave": [
+      "criatividade",
+      "lógica",
+      "autonomia",
+      "linguagem",
+      "Atividades"
+    ]
+  },
+  "enriquecido_em": "2026-03-08T23:53:18.248076Z",
+  "enriquecido_por": "OpenClaw - Juarez (Assistente)"
+}

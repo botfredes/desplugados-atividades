@@ -1,0 +1,53 @@
+{
+  "id": 123,
+  "nome": "Brigadeiro",
+  "categoria": "Culinária e Gastronomia",
+  "faixa_etaria": "7-8 anos",
+  "tempo_entretenimento": "20-40 min",
+  "nivel_bagunca": "Baixa",
+  "quantidade_materiais": "4-7 itens",
+  "tipo_atividade": "Ativa",
+  "energia_crianca": "Média",
+  "supervisao": "Constante",
+  "local": "Interno",
+  "custo": "Baixo (até R$10)",
+  "preparo_adulto": "5-15 min",
+  "habilidade_desenvolvida": "Autonomia",
+  "momento_ideal": "Noite",
+  "clima": "Qualquer",
+  "nivel_criatividade": "Muito Alto",
+  "objetivo": "Desenvolver criatividade através de atividade prática",
+  "descricao": "A criança prepara brigadeiros enrolando bolinhas de chocolate granulado, desenvolvendo habilidades culinárias e autonomia.",
+  "como_aplicar": "Misture leite condensado, chocolate em pó e manteiga em uma panela. Cozinhe em fogo baixo, mexendo sempre, até a mistura desgrudar do fundo. Deixe esfriar, modele bolinhas e passe no granulado.",
+  "materiais_necessarios": "1 lata de leite condensado, 3 colheres (sopa) de chocolate em pó, 1 colher (sopa) de manteiga, chocolate granulado a gosto. (cola branca, cola stick, fita adesiva)",
+  "precisa_antecipacao": "Não",
+  "porque_e_boa": "Mantém a criança concentrada por até 40 minutos com pouca supervisão, e o resultado visual dá orgulho — ela vai querer mostrar para todo mundo.",
+  "o_que_resolve": "Criança entediada em dia de chuva pedindo tela, pais precisam de 30 min para trabalhar.",
+  "tags": [
+    "Autonomia",
+    "independência",
+    "lógica",
+    "criatividade",
+    "Culinária",
+    "foco",
+    "Gastronomia"
+  ],
+  "created_at": "2026-02-17 22:18:58.54169+00",
+  "imagem_url": "/imagens/atividade-123.png",
+  "resumo_pais": "Atividade culinária simples que mantém a criança ocupada e orgulhosa do resultado.",
+  "descricao_html": "<h3>O que é essa atividade?</h3><p>A criança prepara brigadeiros enrolando bolinhas de chocolate granulado, desenvolvendo habilidades culinárias e autonomia.<h3>Como fazer em casa</h3><ol><li><strong>Preparar a mistura:</strong> Em uma panela, misture 1 lata de leite condensado, 3 colheres (sopa) de chocolate em pó e 1 colher (sopa) de manteiga.<li><strong>Cozinhar a mistura:</strong> Leve a panela ao fogo baixo, mexendo constantemente com uma colher de pau ou espátula de silicone. Cozinhe por cerca de 10 a 15 minutos, até que a mistura engrosse e comece a desgrudar do fundo da panela.<li><strong>Resfriar a mistura:</strong> Desligue o fogo e despeje a mistura em um prato untado com manteiga. Deixe esfriar completamente para facilitar o manuseio.<li><strong>Modelar os brigadeiros:</strong> Com as mãos untadas com um pouco de manteiga, pegue pequenas porções da mistura e enrole em bolinhas de aproximadamente 2,5 cm de diâmetro.<li><strong>Passar no granulado:</strong> Passe cada bolinha no chocolate granulado até que fiquem bem cobertas.<li><strong>Servir:</strong> Coloque os brigadeiros em forminhas de papel e sirva a seguir.</ol><h3>Variações e ideias</h3><ul><li><strong>Brigadeiro branco:</strong> Substitua o chocolate em pó por leite em pó para um sabor mais suave.<li><strong>Brigadeiro de leite ninho:</strong> Adicione 4 colheres (sopa) de leite em pó integral à mistura para um sabor mais intenso.<li><strong>Brigadeiro de café:</strong> Acrescente 1 colher (chá) de café solúvel à mistura para um toque especial.<li><strong>Brigadeiro de coco:</strong> Substitua o chocolate em pó por coco ralado e finalize com cravo-da-índia.<li><strong>Brigadeiro de maracujá:</strong> Acrescente 1 colher (sopa) de pó saborizante sabor maracujá para um sabor tropical.</ul><h3>Dica para os pais</h3><p>Se a mistura estiver muito mole para enrolar, adicione um pouco mais de leite em pó até atingir a consistência desejada.\n<h3>📚 Recursos Extras para Enriquecer a Atividade</h3>\n<p>Para tornar esta atividade ainda mais completa, sugerimos:</p>\n<ul>\n<li><strong>Materiais adicionais:</strong> Considere ter à mão itens relacionados à culinária e gastronomia</li>\n<li><strong>Preparação antecipada:</strong> Nenhum são suficientes para organizar tudo</li>\n<li><strong>Adaptações:</strong> A atividade pode ser simplificada para crianças mais novas ou complexificada para mais velhas</li>\n</ul>\n<p><em>Dica:</em> Pesquise online por \"Brigadeiro\" + \"atividades infantis\" para mais inspirações.</p>\n\n<h3>⚠️ Dicas de Segurança</h3>\n<ul>\n<li><strong>Supervisão:</strong> Sempre supervisione atividades que envolvam objetos pequenos, líquidos ou ferramentas</li>\n<li><strong>Materiais:</strong> Use materiais não tóxicos e apropriados para a idade da criança</li>\n<li><strong>Espaço:</strong> Prepare um espaço seguro, livre de obstáculos e fácil de limpar</li>\n<li><strong>Proteção:</strong> Use aventais ou roupas velhas para atividades com tintas e colas</li>\n</ul>\n<h3>🔄 Variações da Atividade</h3><ul><li><strong>Para crianças mais novas:</strong> Simplifique as regras, reduza o tempo, ofereça mais ajuda</li><li><strong>Para crianças mais velhas:</strong> Aumente o desafio, adicione regras, incentive a autonomia</li><li><strong>Para fazer em grupo:</strong> Adapte para múltiplas crianças, crie times, promova cooperação</li><li><strong>Para dias chuvosos:</strong> Faça versão indoor, use materiais alternativos, adapte o espaço</li><li><strong>Para aprender mais:</strong> Relacione com conceitos educacionais, pesquise sobre o tema</li></ul>",
+  "imagem_prompt": "Criança de 7 anos enrolando brigadeiros com as mãos, cozinha doméstica, sorriso de concentração, Ilustração infantil moderna, cores quentes e suaves, estilo educativo, sem telas, sem texto",
+  "recursos_online": {
+    "pesquisa_sugerida": "Brigadeiro atividades infantis",
+    "categoria": "Culinária e Gastronomia",
+    "palavras_chave": [
+      "lógica",
+      "independência",
+      "foco",
+      "criatividade",
+      "Culinária"
+    ]
+  },
+  "enriquecido_em": "2026-03-08T23:53:18.253146Z",
+  "enriquecido_por": "OpenClaw - Juarez (Assistente)"
+}

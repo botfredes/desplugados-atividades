@@ -1,0 +1,49 @@
+{
+  "total_atividades": 143,
+  "categorias": {
+    "total": 15,
+    "lista": [
+      "Artes Experimentais e Sensoriais",
+      "Atividades Sensoriais",
+      "Atividades de Conexão",
+      "Ciências e Experimentos",
+      "Construção e Engenharia",
+      "Culinária e Gastronomia",
+      "Desafios e Missões",
+      "Dramatização e Faz de Conta",
+      "Jogos de Tabuleiro e Cartas",
+      "Leitura e Narrativa",
+      "Lógica e Matemática",
+      "Movimento e Coordenação",
+      "Música e Ritmo",
+      "Natureza e Exploração",
+      "Projetos Criativos"
+    ]
+  },
+  "faixa_etaria": {
+    "3-8 anos": 32,
+    "7-8 anos": 34,
+    "3-4 anos": 38,
+    "5-6 anos": 39
+  },
+  "tempo_preparo": {
+    "5 min": 37,
+    "15-30 min": 15,
+    "5-10 min": 22,
+    "5-15 min": 21,
+    "10-20 min": 19,
+    "10-15 min": 29
+  },
+  "nivel_bagunca": {
+    "Média": 46,
+    "Baixa": 31,
+    "Nenhuma": 30,
+    "Alta": 36
+  },
+  "custo": {
+    "Baixo (até R$10)": 43,
+    "Alto (R$30+)": 36,
+    "Médio (R$10-30)": 28,
+    "Grátis": 36
+  }
+}
