@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desplugados - Atividades para Crianças</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-child"></i> Desplugados</h1>
+            <p class="subtitle">Atividades criativas para crianças de 3 a 8 anos</p>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number" id="total-activities">143</span>
+                    <span class="stat-label">Atividades</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">15</span>
+                    <span class="stat-label">Categorias</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">3-8</span>
+                    <span class="stat-label">Idade</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="filters">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Buscar atividades...">
+                </div>
+                <div class="filter-options">
+                    <select id="category-filter">
+                        <option value="">Todas as categorias</option>
+                    </select>
+                    <select id="age-filter">
+                        <option value="">Todas as idades</option>
+                        <option value="3-4">3-4 anos</option>
+                        <option value="5-6">5-6 anos</option>
+                        <option value="7-8">7-8 anos</option>
+                    </select>
+                    <select id="time-filter">
+                        <option value="">Qualquer duração</option>
+                        <option value="short">Até 20 min</option>
+                        <option value="medium">20-40 min</option>
+                        <option value="long">40+ min</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="categories" id="categories-section">
+                <h2><i class="fas fa-tags"></i> Categorias</h2>
+                <div class="categories-grid" id="categories-grid">
+                    <!-- Categorias serão geradas por JavaScript -->
+                </div>
+            </section>
+
+            <section class="activities">
+                <h2><i class="fas fa-gamepad"></i> Todas as Atividades</h2>
+                <div class="activities-grid" id="activities-grid">
+                    <!-- Atividades serão carregadas por JavaScript -->
+                </div>
+                <div class="loading" id="loading">
+                    <i class="fas fa-spinner fa-spin"></i> Carregando atividades...
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Desenvolvido com <i class="fas fa-heart"></i> para pais e educadores</p>
+            <p>Dados do projeto Desplugados | <a href="https://github.com/botfredes/desplugados-atividades" target="_blank">GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="data/atividades.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
