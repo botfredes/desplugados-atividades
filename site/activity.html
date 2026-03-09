@@ -1,50 +1,366 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desplugados - Detalhes da Atividade</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Desplugados - Visualizar Atividade</title>
+    <!-- Tailwind CSS + Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Supabase JS Client -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <style>
+        /* Estilos personalizados */
+        .badge-status-pendente {
+            background-color: #fbbf24 !important;
+            color: #1f2937 !important;
+        }
+        
+        .badge-status-em_revisao {
+            background-color: #3b82f6 !important;
+            color: white !important;
+        }
+        
+        .badge-status-aprovada {
+            background-color: #10b981 !important;
+            color: white !important;
+        }
+        
+        .badge-status-precisa_melhorias {
+            background-color: #ef4444 !important;
+            color: white !important;
+        }
+        
+        .html-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+        
+        .html-content ul, .html-content ol {
+            padding-left: 1.5rem;
+            margin: 0.5rem 0;
+        }
+        
+        .html-content li {
+            margin: 0.25rem 0;
+        }
+        
+        .html-content h3, .html-content h4, .html-content h5 {
+            font-weight: bold;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: #1f2937;
+        }
+        
+        .html-content h3 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+        }
+        
+        .html-content h4 {
+            font-size: 1.25rem;
+        }
+        
+        .html-content p {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+        
+        .html-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        .html-content table th, .html-content table td {
+            border: 1px solid #e5e7eb;
+            padding: 0.5rem;
+            text-align: left;
+        }
+        
+        .html-content table th {
+            background-color: #f9fafb;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <header>
-            <h1><i class="fas fa-child"></i> Desplugados</h1>
-            <p class="subtitle">Detalhes da atividade</p>
-            <a href="index.html" class="back-btn">
-                <i class="fas fa-arrow-left"></i> Voltar para lista
-            </a>
-        </header>
-
-        <main id="activity-details">
-            <div class="loading" id="loading">
-                <i class="fas fa-spinner fa-spin"></i> Carregando atividade...
-            </div>
-            
-            <div class="activity-detail-container" id="activity-container" style="display: none;">
-                <!-- Conteúdo será preenchido por JavaScript -->
-            </div>
-            
-            <div class="not-found" id="not-found" style="display: none;">
-                <div class="no-results">
-                    <i class="fas fa-exclamation-circle"></i>
-                    <h3>Atividade não encontrada</h3>
-                    <p>A atividade que você está procurando não existe ou foi removida.</p>
-                    <a href="index.html" class="view-btn" style="display: inline-block; margin-top: 20px;">
-                        <i class="fas fa-home"></i> Voltar para a lista
-                    </a>
-                </div>
-            </div>
-        </main>
-
-        <footer>
-            <p>Desenvolvido com <i class="fas fa-heart"></i> para pais e educadores</p>
-            <p>Dados do projeto Desplugados | <a href="https://github.com/botfredes/desplugados-atividades" target="_blank">GitHub</a></p>
-        </footer>
+<body class="min-h-screen bg-base-100">
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">
+        <div class="text-center">
+            <span class="loading loading-spinner loading-lg text-primary"></span>
+            <p id="loading-text" class="mt-4 text-lg font-semibold">Carregando atividade...</p>
+        </div>
     </div>
 
-    <script src="data/atividades.js"></script>
+    <!-- Navbar -->
+    <div class="navbar bg-base-100 shadow-lg sticky top-0 z-40">
+        <div class="navbar-start">
+            <a href="admin.html" class="btn btn-ghost">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Voltar para Admin
+            </a>
+        </div>
+        <div class="navbar-center">
+            <a class="btn btn-ghost text-xl">
+                <i class="fas fa-child text-primary"></i>
+                <span class="ml-2">Desplugados</span>
+            </a>
+        </div>
+        <div class="navbar-end">
+            <div class="dropdown dropdown-end">
+                <div tabindex="0" role="button" class="btn btn-ghost">
+                    <i class="fas fa-ellipsis-v text-xl"></i>
+                </div>
+                <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                    <li><a href="index.html">
+                        <i class="fas fa-home"></i> Site Público
+                    </a></li>
+                    <li><a href="https://github.com/botfredes/desplugados-atividades" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a></li>
+                    <li><a href="https://yxagqrsdfiokogwksvbu.supabase.co" target="_blank">
+                        <i class="fas fa-database"></i> Supabase
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main class="container mx-auto px-4 py-6 max-w-6xl">
+        <div id="activity-not-found" class="hidden">
+            <div class="alert alert-error shadow-lg">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div>
+                    <h3 class="font-bold">Atividade não encontrada</h3>
+                    <div class="text-xs">Verifique se o ID está correto ou se a atividade existe.</div>
+                </div>
+                <a href="admin.html" class="btn btn-sm btn-primary">Voltar para Admin</a>
+            </div>
+        </div>
+
+        <div id="activity-content" class="hidden">
+            <!-- Cabeçalho da Atividade -->
+            <div class="card bg-base-100 shadow-xl mb-6">
+                <div class="card-body">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                        <div>
+                            <h1 id="activity-title" class="text-3xl font-bold mb-2">Carregando...</h1>
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span id="activity-status" class="badge badge-lg">Pendente</span>
+                                <span id="activity-id" class="badge badge-outline badge-lg">ID: 0</span>
+                                <span id="activity-category" class="badge badge-outline badge-lg">Categoria</span>
+                                <span id="activity-age" class="badge badge-outline badge-lg">Idade</span>
+                            </div>
+                            <p id="activity-description" class="text-gray-600">Descrição da atividade...</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <button id="edit-json-btn" class="btn btn-primary" disabled>
+                                <i class="fas fa-edit mr-2"></i>
+                                Editar JSON
+                            </button>
+                            <button id="print-btn" class="btn btn-outline" onclick="window.print()">
+                                <i class="fas fa-print mr-2"></i>
+                                Imprimir
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grid de Informações -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                <!-- Coluna 1: Detalhes -->
+                <div class="space-y-6">
+                    <!-- Metadados -->
+                    <div class="card bg-base-100 shadow">
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                <i class="fas fa-info-circle text-primary mr-2"></i>
+                                Informações da Atividade
+                            </h2>
+                            <div class="overflow-x-auto">
+                                <table class="table table-zebra">
+                                    <tbody>
+                                        <tr>
+                                            <th class="bg-base-200">Tempo de Entretenimento</th>
+                                            <td id="info-tempo">-</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="bg-base-200">Preparo Adulto</th>
+                                            <td id="info-preparo">-</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="bg-base-200">Nível de Bagunça</th>
+                                            <td id="info-bagunca">-</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="bg-base-200">Custo</th>
+                                            <td id="info-custo">-</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="bg-base-200">Supervisão</th>
+                                            <td id="info-supervisao">-</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="bg-base-200">Energia da Criança</th>
+                                            <td id="info-energia">-</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="bg-base-200">Local</th>
+                                            <td id="info-local">-</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="bg-base-200">Momento Ideal</th>
+                                            <td id="info-momento">-</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="bg-base-200">Clima</th>
+                                            <td id="info-clima">-</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Materiais -->
+                    <div class="card bg-base-100 shadow">
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                <i class="fas fa-box-open text-primary mr-2"></i>
+                                Materiais Necessários
+                            </h2>
+                            <div id="info-materiais" class="prose max-w-none">
+                                <p>Carregando...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tags -->
+                    <div class="card bg-base-100 shadow">
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                <i class="fas fa-tags text-primary mr-2"></i>
+                                Tags
+                            </h2>
+                            <div id="info-tags" class="flex flex-wrap gap-2">
+                                <span class="loading loading-spinner loading-sm"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Conteúdo -->
+                <div class="space-y-6">
+                    <!-- Como Aplicar -->
+                    <div class="card bg-base-100 shadow">
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                <i class="fas fa-play-circle text-primary mr-2"></i>
+                                Como Aplicar
+                            </h2>
+                            <div id="info-como-aplicar" class="prose max-w-none">
+                                <p>Carregando...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Objetivo -->
+                    <div class="card bg-base-100 shadow">
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                <i class="fas fa-bullseye text-primary mr-2"></i>
+                                Objetivo
+                            </h2>
+                            <div id="info-objetivo" class="prose max-w-none">
+                                <p>Carregando...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Por que é boa -->
+                    <div class="card bg-base-100 shadow">
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                <i class="fas fa-thumbs-up text-primary mr-2"></i>
+                                Por que é boa
+                            </h2>
+                            <div id="info-porque-boa" class="prose max-w-none">
+                                <p>Carregando...</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- O que resolve -->
+                    <div class="card bg-base-100 shadow">
+                        <div class="card-body">
+                            <h2 class="card-title">
+                                <i class="fas fa-check-circle text-primary mr-2"></i>
+                                O que resolve
+                            </h2>
+                            <div id="info-resolve" class="prose max-w-none">
+                                <p>Carregando...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Descrição HTML Completa -->
+            <div class="card bg-base-100 shadow mb-6">
+                <div class="card-body">
+                    <h2 class="card-title">
+                        <i class="fas fa-file-code text-primary mr-2"></i>
+                        Descrição Completa
+                    </h2>
+                    <div id="info-descricao-html" class="html-content prose max-w-none">
+                        <div class="text-center py-8">
+                            <span class="loading loading-spinner loading-lg"></span>
+                            <p class="mt-4">Carregando descrição completa...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comentários -->
+            <div class="card bg-base-100 shadow">
+                <div class="card-body">
+                    <h2 class="card-title">
+                        <i class="fas fa-comments text-primary mr-2"></i>
+                        Comentários
+                        <span id="comment-count" class="badge badge-primary">0</span>
+                    </h2>
+                    <div id="comments-container" class="space-y-4">
+                        <div class="text-center py-8">
+                            <i class="fas fa-comment-slash text-4xl text-gray-300 mb-4"></i>
+                            <p class="text-gray-500">Nenhum comentário ainda.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-4 bg-base-200 text-base-content mt-12">
+        <div>
+            <p>Desplugados • Visualização de Atividade • Dados do Supabase</p>
+            <p class="text-sm mt-1">
+                <a href="index.html" class="link link-primary">Site Público</a> • 
+                <a href="admin.html" class="link link-secondary">Admin</a> • 
+                <a href="https://github.com/botfredes/desplugados-atividades" target="_blank" class="link">GitHub</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script principal -->
     <script src="activity.js"></script>
 </body>
 </html>

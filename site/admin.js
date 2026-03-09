@@ -1,163 +1,210 @@
-// Painel de Administração Desplugados
+// Admin Supabase Simplificado - Desplugados
 document.addEventListener('DOMContentLoaded', function() {
+    // Configurações do Supabase
+    const SUPABASE_URL = 'https://yxagqrsdfiokogwksvbu.supabase.co';
+    const SUPABASE_KEY = 'sb_publishable_BZutp_epytYYLZiKofldxg_FuqLwXIf';
+    
+    // Inicializar cliente Supabase
+    const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+    
     // Elementos DOM
-    const adminStats = document.getElementById('admin-stats');
-    const problemCount = document.getElementById('problem-count');
-    const activitiesAdminContainer = document.getElementById('activities-admin-container');
-    const loadingElement = document.getElementById('loading');
-    const exportBtn = document.getElementById('export-btn');
+    const loadingOverlay = document.getElementById('loading-overlay');
+    const loadingText = document.getElementById('loading-text');
+    const searchInput = document.getElementById('search-input');
+    const filterStatus = document.getElementById('filter-status');
     const filterCategory = document.getElementById('filter-category');
-    const filterProblemCount = document.getElementById('filter-problem-count');
-    const filterPriority = document.getElementById('filter-priority');
-    const otherActivitiesSection = document.getElementById('other-activities-section');
-    const otherActivitiesContainer = document.getElementById('other-activities-container');
+    const filterAge = document.getElementById('filter-age');
+    const clearFiltersBtn = document.getElementById('clear-filters');
+    const activitiesContainer = document.getElementById('activities-container');
+    const activitiesCount = document.getElementById('activities-count');
     
-    // Dados
-    let completudeData = {};
-    let problematicasData = [];
+    // Elementos de estatísticas
+    const statTotal = document.getElementById('stat-total');
+    const statPendentes = document.getElementById('stat-pendentes');
+    const statAprovadas = document.getElementById('stat-aprovadas');
+    const statMelhorias = document.getElementById('stat-melhorias');
+    
+    // Estado
     let allActivities = [];
-    let enrichmentData = {};
+    let categories = new Set();
     
-    // Inicializar
-    function initAdmin() {
-        // Carregar dados de completude (já carregado via script tag)
-        if (typeof window.completudeData !== 'undefined') {
-            completudeData = window.completudeData;
-        }
-        
-        // Carregar dados de atividades problemáticas
-        if (typeof window.problematicasData !== 'undefined') {
-            problematicasData = window.problematicasData.atividades || [];
-        }
-        
-        // Carregar dados completos das atividades
-        if (typeof window.atividadesData !== 'undefined') {
-            allActivities = window.atividadesData.atividades || [];
-        }
-        
-        // Carregar dados de enriquecimento do localStorage
-        loadEnrichmentData();
-        
-        // Atualizar interface
-        updateStats();
-        loadCategoryFilter();
-        loadActivities();
-        setupEventListeners();
-        
-        // Esconder loading
-        setTimeout(() => {
-            if (loadingElement) {
-                loadingElement.style.display = 'none';
-            }
-        }, 500);
+    // Funções de utilidade
+    function showLoading(message = 'Carregando...') {
+        if (loadingText) loadingText.textContent = message;
+        if (loadingOverlay) loadingOverlay.classList.remove('hidden');
     }
     
-    // Carregar dados de enriquecimento do localStorage
-    function loadEnrichmentData() {
-        const saved = localStorage.getItem('desplugados_enrichment');
-        if (saved) {
-            try {
-                enrichmentData = JSON.parse(saved);
-            } catch (e) {
-                enrichmentData = {};
-            }
-        } else {
-            enrichmentData = {};
-        }
+    function hideLoading() {
+        if (loadingOverlay) loadingOverlay.classList.add('hidden');
     }
     
-    // Salvar dados de enriquecimento no localStorage
-    function saveEnrichmentData() {
-        localStorage.setItem('desplugados_enrichment', JSON.stringify(enrichmentData));
+    function showError(message) {
+        const modal = document.createElement('div');
+        modal.className = 'modal modal-open';
+        modal.innerHTML = `
+            <div class="modal-box">
+                <h3 class="font-bold text-lg text-error">
+                    <i class="fas fa-exclamation-triangle mr-2"></i>
+                    Erro
+                </h3>
+                <p class="py-4">${message}</p>
+                <div class="modal-action">
+                    <button onclick="this.closest('.modal').remove()" class="btn btn-primary">OK</button>
+                </div>
+            </div>
+        `;
+        document.body.appendChild(modal);
+    }
+    
+    function showNotification(message, type = 'success') {
+        const notification = document.createElement('div');
+        notification.className = `toast toast-top toast-end`;
+        notification.innerHTML = `
+            <div class="alert alert-${type}">
+                <span>${message}</span>
+            </div>
+        `;
+        document.body.appendChild(notification);
+        setTimeout(() => notification.remove(), 3000);
+    }
+    
+    // Carregar atividades
+    async function loadActivities() {
+        showLoading('Carregando atividades...');
+        
+        try {
+            // Buscar todas as atividades
+            const { data, error } = await supabase
+                .from('atividades_v2')
+                .select('*')
+                .order('id');
+            
+            if (error) throw error;
+            
+            allActivities = data || [];
+            
+            // Extrair categorias
+            categories.clear();
+            allActivities.forEach(activity => {
+                if (activity.dados && activity.dados.categoria) {
+                    categories.add(activity.dados.categoria);
+                }
+            });
+            
+            // Atualizar estatísticas
+            updateStatistics();
+            
+            // Carregar filtros
+            loadCategoryFilter();
+            
+            // Carregar lista
+            filterAndRenderActivities();
+            
+        } catch (error) {
+            showError(`Falha ao carregar atividades: ${error.message}`);
+        } finally {
+            hideLoading();
+        }
     }
     
     // Atualizar estatísticas
-    function updateStats() {
-        if (!completudeData.estatisticas) return;
+    function updateStatistics() {
+        if (!allActivities.length) return;
         
-        const stats = completudeData.estatisticas;
+        const total = allActivities.length;
+        const pendentes = allActivities.filter(a => a.status_revisao === 'pendente').length;
+        const aprovadas = allActivities.filter(a => a.status_revisao === 'aprovada').length;
+        const precisaMelhorias = allActivities.filter(a => a.status_revisao === 'precisa_melhorias').length;
         
-        if (adminStats) {
-            adminStats.innerHTML = `
-                <div class="admin-stat">
-                    <span class="number">${stats.total}</span>
-                    <span class="label">Total de Atividades</span>
-                </div>
-                <div class="admin-stat">
-                    <span class="number">${stats.problematicas}</span>
-                    <span class="label">Problemáticas</span>
-                </div>
-                <div class="admin-stat">
-                    <span class="number">${stats.completas}</span>
-                    <span class="label">Completas</span>
-                </div>
-                <div class="admin-stat">
-                    <span class="number">${stats.score_medio}</span>
-                    <span class="label">Pontuação Média</span>
-                </div>
-            `;
-        }
-        
-        if (problemCount) {
-            problemCount.textContent = stats.problematicas;
-        }
+        if (statTotal) statTotal.textContent = total;
+        if (statPendentes) statPendentes.textContent = pendentes;
+        if (statAprovadas) statAprovadas.textContent = aprovadas;
+        if (statMelhorias) statMelhorias.textContent = precisaMelhorias;
     }
     
-    // Carregar categorias no filtro
+    // Carregar filtro de categorias
     function loadCategoryFilter() {
         if (!filterCategory) return;
         
-        // Extrair categorias únicas das atividades problemáticas
-        const categories = new Set();
-        problematicasData.forEach(activity => {
-            if (activity.categoria) {
-                categories.add(activity.categoria);
-            }
-        });
+        // Limpar opções (mantendo a primeira)
+        while (filterCategory.options.length > 1) {
+            filterCategory.remove(1);
+        }
         
-        // Ordenar e adicionar opções
-        Array.from(categories).sort().forEach(category => {
+        // Ordenar categorias e adicionar
+        Array.from(categories).sort().forEach(categoria => {
             const option = document.createElement('option');
-            option.value = category;
-            option.textContent = category;
+            option.value = categoria;
+            option.textContent = categoria;
             filterCategory.appendChild(option);
         });
     }
     
-    // Carregar atividades
-    function loadActivities() {
-        if (!activitiesAdminContainer) return;
-        
-        // Filtrar atividades (por enquanto só problemáticas)
-        let filteredActivities = problematicasData;
+    // Filtrar e renderizar atividades
+    function filterAndRenderActivities() {
+        if (!activitiesContainer) return;
         
         // Aplicar filtros
-        if (filterCategory.value) {
-            filteredActivities = filteredActivities.filter(a => a.categoria === filterCategory.value);
+        let filtered = allActivities;
+        
+        // Filtro de status
+        const statusFilter = filterStatus.value;
+        if (statusFilter) {
+            filtered = filtered.filter(a => a.status_revisao === statusFilter);
         }
         
-        if (filterProblemCount.value) {
-            const count = parseInt(filterProblemCount.value);
-            filteredActivities = filteredActivities.filter(a => a.qtd_problemas === count);
+        // Filtro de categoria
+        const categoryFilter = filterCategory.value;
+        if (categoryFilter) {
+            filtered = filtered.filter(a => a.dados && a.dados.categoria === categoryFilter);
         }
         
-        // Ordenar por pontuação (mais baixa primeiro)
-        filteredActivities.sort((a, b) => a.pontuacao - b.pontuacao);
+        // Filtro de idade
+        const ageFilter = filterAge.value;
+        if (ageFilter) {
+            filtered = filtered.filter(a => a.dados && a.dados.faixa_etaria === ageFilter);
+        }
+        
+        // Filtro de busca
+        const searchTerm = searchInput.value.toLowerCase();
+        if (searchTerm) {
+            filtered = filtered.filter(a => {
+                const nome = a.dados?.nome?.toLowerCase() || '';
+                const descricao = a.dados?.descricao?.toLowerCase() || '';
+                const tags = Array.isArray(a.dados?.tags) ? a.dados.tags.join(' ').toLowerCase() : '';
+                
+                return nome.includes(searchTerm) || 
+                       descricao.includes(searchTerm) || 
+                       tags.includes(searchTerm);
+            });
+        }
+        
+        // Ordenar por ID
+        filtered.sort((a, b) => a.id - b.id);
+        
+        // Atualizar contador
+        if (activitiesCount) {
+            activitiesCount.textContent = filtered.length;
+        }
         
         // Renderizar
-        renderActivities(filteredActivities);
+        renderActivities(filtered);
     }
     
-    // Renderizar atividades
+    // Renderizar lista de atividades
     function renderActivities(activities) {
-        if (!activitiesAdminContainer) return;
+        if (!activitiesContainer) return;
         
         if (activities.length === 0) {
-            activitiesAdminContainer.innerHTML = `
-                <div class="no-activities">
-                    <i class="fas fa-check-circle" style="font-size: 3rem; color: #2ed573; margin-bottom: 1rem;"></i>
-                    <h3>Nenhuma atividade encontrada</h3>
-                    <p>Experimente ajustar os filtros.</p>
+            activitiesContainer.innerHTML = `
+                <div class="col-span-full text-center py-12">
+                    <i class="fas fa-search text-6xl text-gray-300 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2">Nenhuma atividade encontrada</h3>
+                    <p class="text-gray-500">Experimente ajustar os filtros ou a busca.</p>
+                    <button onclick="clearFilters()" class="btn btn-primary mt-4">
+                        <i class="fas fa-times mr-2"></i>
+                        Limpar Filtros
+                    </button>
                 </div>
             `;
             return;
@@ -166,228 +213,223 @@ document.addEventListener('DOMContentLoaded', function() {
         let html = '';
         
         activities.forEach(activity => {
-            const activityId = activity.id;
-            const activityDetails = allActivities.find(a => a.id === activityId) || {};
-            const enrichment = enrichmentData[activityId] || {};
-            
-            // Links do GitHub
-            const githubJsonUrl = `https://github.com/botfredes/desplugados-atividades/edit/main/atividades/individuais/${String(activityId).padStart(3, '0')}-${activityDetails.slug || 'atividade'}.json`;
-            const githubMarkdownUrl = `https://github.com/botfredes/desplugados-atividades/tree/main/markdown-atividades`;
-            
-            // Determinar cor da pontuação
-            let scoreColor = '#2ed573'; // verde
-            if (activity.pontuacao < 70) scoreColor = '#ff4757'; // vermelho
-            else if (activity.pontuacao < 80) scoreColor = '#ffa502'; // laranja
+            const dados = activity.dados || {};
+            const statusClass = `badge-status-${activity.status_revisao}`;
+            const statusLabel = getStatusLabel(activity.status_revisao);
+            const commentCount = activity.comentarios?.length || 0;
             
             html += `
-                <div class="activity-card-admin problematica" id="activity-${activityId}">
-                    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                        <div>
-                            <h3 style="margin: 0 0 0.5rem 0;">${activity.nome} <span style="font-size: 0.9rem; color: #666;">(ID: ${activityId})</span></h3>
-                            <div style="display: flex; gap: 1rem; margin-bottom: 0.5rem;">
-                                <span style="background: #e9ecef; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.8rem;">
-                                    ${activity.categoria}
-                                </span>
-                                <span style="background: #e9ecef; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.8rem;">
-                                    ${activity.faixa_etaria}
-                                </span>
-                                <span style="background: ${scoreColor}; color: white; padding: 0.25rem 0.75rem; border-radius: 12px; font-size: 0.8rem; font-weight: bold;">
-                                    ${activity.pontuacao}/100
-                                </span>
-                                <span class="problem-badge">
-                                    ${activity.qtd_problemas} problema${activity.qtd_problemas !== 1 ? 's' : ''}
-                                </span>
+                <div class="card card-compact bg-base-100 shadow hover:shadow-lg transition-shadow">
+                    <div class="card-body">
+                        <div class="flex justify-between items-start">
+                            <div class="flex-1">
+                                <div class="flex items-start gap-2">
+                                    <h3 class="card-title text-lg mb-1 flex-1">
+                                        ${dados.nome || 'Sem nome'}
+                                        <span class="text-sm font-normal text-gray-500">#${activity.id}</span>
+                                    </h3>
+                                    <div class="badge ${statusClass} font-semibold">
+                                        ${statusLabel}
+                                    </div>
+                                </div>
+                                <div class="flex flex-wrap gap-1 mb-2">
+                                    <span class="badge badge-outline badge-sm">
+                                        <i class="fas fa-tag mr-1"></i> ${dados.categoria || 'Sem categoria'}
+                                    </span>
+                                    <span class="badge badge-outline badge-sm">
+                                        <i class="fas fa-child mr-1"></i> ${dados.faixa_etaria || 'Sem idade'}
+                                    </span>
+                                    <span class="badge badge-outline badge-sm">
+                                        <i class="fas fa-clock mr-1"></i> ${dados.tempo_entretenimento || 'Sem tempo'}
+                                    </span>
+                                </div>
+                                <p class="text-gray-600 text-sm line-clamp-2 mb-3">
+                                    ${(dados.descricao || '').substring(0, 120)}${(dados.descricao || '').length > 120 ? '...' : ''}
+                                </p>
                             </div>
                         </div>
-                        <div>
-                            <span class="priority-badge ${enrichment.priority || 'priority-medium'}">
-                                ${(enrichment.priority || 'medium').toUpperCase()}
-                            </span>
-                        </div>
-                    </div>
-                    
-                    <div style="margin-top: 1rem;">
-                        <p><strong>Tempo:</strong> ${activity.tempo} | <strong>Preparo:</strong> ${activity.preparo}</p>
-                    </div>
-                    
-                    ${activity.problemas && activity.problemas.length > 0 ? `
-                    <div class="problems-list">
-                        <h4 style="margin-top: 0; color: #e53e3e;"><i class="fas fa-exclamation-circle"></i> Problemas Identificados</h4>
-                        ${activity.problemas.map(problema => `
-                            <div class="problem-item">
-                                <i class="fas fa-times-circle"></i> ${problema}
+                        
+                        <div class="card-actions justify-between items-center">
+                            <div class="text-sm text-gray-500">
+                                <i class="fas fa-comment mr-1"></i> ${commentCount} comentário${commentCount !== 1 ? 's' : ''}
+                                <span class="mx-2">•</span>
+                                <i class="fas fa-history mr-1"></i> ${activity.historico?.length || 0} histórico
                             </div>
-                        `).join('')}
-                    </div>
-                    ` : ''}
-                    
-                    <div class="github-links">
-                        <a href="activity.html?id=${activityId}" class="github-link" target="_blank">
-                            <i class="fas fa-eye"></i> Ver Atividade
-                        </a>
-                        <a href="${githubJsonUrl}" class="github-link" target="_blank">
-                            <i class="fab fa-github"></i> Editar JSON
-                        </a>
-                        <a href="${githubMarkdownUrl}" class="github-link" target="_blank">
-                            <i class="fab fa-markdown"></i> Ver Markdown
-                        </a>
-                    </div>
-                    
-                    <div class="enrichment-form">
-                        <h4><i class="fas fa-magic"></i> Enriquecimento</h4>
-                        
-                        <div class="form-group">
-                            <label for="links-${activityId}">Links para enriquecimento (um por linha)</label>
-                            <textarea 
-                                id="links-${activityId}" 
-                                class="form-control" 
-                                rows="3" 
-                                placeholder="Ex: https://exemplo.com/tutorial
-https://pinterest.com/ideias
-https://youtube.com/video"
-                            >${enrichment.links ? enrichment.links.join('\n') : ''}</textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="notes-${activityId}">Notas e observações</label>
-                            <textarea 
-                                id="notes-${activityId}" 
-                                class="form-control" 
-                                rows="2"
-                                placeholder="Ideias para melhorar, adaptações, materiais alternativos..."
-                            >${enrichment.notes || ''}</textarea>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="priority-${activityId}">Prioridade</label>
-                            <select id="priority-${activityId}" class="form-control">
-                                <option value="high" ${enrichment.priority === 'high' ? 'selected' : ''}>Alta</option>
-                                <option value="medium" ${!enrichment.priority || enrichment.priority === 'medium' ? 'selected' : ''}>Média</option>
-                                <option value="low" ${enrichment.priority === 'low' ? 'selected' : ''}>Baixa</option>
-                            </select>
-                        </div>
-                        
-                        <div style="display: flex; justify-content: space-between;">
-                            <button onclick="saveActivityEnrichment(${activityId})" class="btn btn-primary">
-                                <i class="fas fa-save"></i> Salvar
-                            </button>
-                            <button onclick="clearActivityEnrichment(${activityId})" class="btn btn-danger">
-                                <i class="fas fa-trash"></i> Limpar
-                            </button>
+                            <div class="flex gap-2">
+                                <div class="dropdown dropdown-end">
+                                    <div tabindex="0" role="button" class="btn btn-sm btn-ghost">
+                                        <i class="fas fa-ellipsis-v"></i>
+                                    </div>
+                                    <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1] w-40 p-2 shadow">
+                                        <li>
+                                            <a href="activity.html?id=${activity.id}" target="_blank">
+                                                <i class="fas fa-eye"></i> Ver Detalhes
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://github.com/botfredes/desplugados-atividades/edit/main/atividades/individuais/${String(activity.id).padStart(3, '0')}-${dados.slug || 'atividade'}.json" target="_blank">
+                                                <i class="fas fa-edit"></i> Editar JSON
+                                            </a>
+                                        </li>
+                                        <li><hr class="my-1"></li>
+                                        <li>
+                                            <a onclick="quickUpdateStatus(${activity.id}, 'pendente')">
+                                                <i class="fas fa-clock"></i> Pendente
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a onclick="quickUpdateStatus(${activity.id}, 'em_revisao')">
+                                                <i class="fas fa-search"></i> Em Revisão
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a onclick="quickUpdateStatus(${activity.id}, 'aprovada')">
+                                                <i class="fas fa-check"></i> Aprovada
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a onclick="quickUpdateStatus(${activity.id}, 'precisa_melhorias')">
+                                                <i class="fas fa-exclamation-triangle"></i> Precisa Melhorias
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a href="activity.html?id=${activity.id}" target="_blank" class="btn btn-sm btn-primary">
+                                    Ver Detalhes
+                                    <i class="fas fa-external-link-alt ml-1"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
             `;
         });
         
-        activitiesAdminContainer.innerHTML = html;
+        activitiesContainer.innerHTML = html;
+    }
+    
+    // Atualização rápida de status
+    window.quickUpdateStatus = async function(activityId, newStatus) {
+        showLoading('Atualizando status...');
+        
+        try {
+            // Buscar atividade atual
+            const { data: currentData, error: fetchError } = await supabase
+                .from('atividades_v2')
+                .select('*')
+                .eq('id', activityId)
+                .single();
+            
+            if (fetchError) throw fetchError;
+            
+            // Adicionar ao histórico
+            const historico = currentData.historico || [];
+            historico.push({
+                data: new Date().toISOString(),
+                campo: 'status_revisao',
+                valor_antigo: currentData.status_revisao,
+                valor_novo: newStatus,
+                autor: 'admin'
+            });
+            
+            // Atualizar no Supabase
+            const { error } = await supabase
+                .from('atividades_v2')
+                .update({
+                    status_revisao: newStatus,
+                    historico: historico,
+                    updated_at: new Date().toISOString()
+                })
+                .eq('id', activityId);
+            
+            if (error) throw error;
+            
+            // Recarregar atividades
+            await loadActivities();
+            
+            showNotification(`✅ Status atualizado para "${getStatusLabel(newStatus)}"!`);
+            
+        } catch (error) {
+            showError(`Falha ao atualizar status: ${error.message}`);
+        } finally {
+            hideLoading();
+        }
+    };
+    
+    // Limpar filtros
+    window.clearFilters = function() {
+        if (searchInput) searchInput.value = '';
+        if (filterStatus) filterStatus.value = '';
+        if (filterCategory) filterCategory.value = '';
+        if (filterAge) filterAge.value = '';
+        filterAndRenderActivities();
+    };
+    
+    // Funções auxiliares
+    function getStatusLabel(status) {
+        const labels = {
+            'pendente': 'Pendente',
+            'em_revisao': 'Em Revisão',
+            'aprovada': 'Aprovada',
+            'precisa_melhorias': 'Precisa Melhorias'
+        };
+        return labels[status] || status;
     }
     
     // Configurar event listeners
     function setupEventListeners() {
         // Filtros
+        if (filterStatus) {
+            filterStatus.addEventListener('change', filterAndRenderActivities);
+        }
         if (filterCategory) {
-            filterCategory.addEventListener('change', loadActivities);
+            filterCategory.addEventListener('change', filterAndRenderActivities);
         }
-        if (filterProblemCount) {
-            filterProblemCount.addEventListener('change', loadActivities);
-        }
-        if (filterPriority) {
-            filterPriority.addEventListener('change', loadActivities);
+        if (filterAge) {
+            filterAge.addEventListener('change', filterAndRenderActivities);
         }
         
-        // Botão de exportação
-        if (exportBtn) {
-            exportBtn.addEventListener('click', exportEnrichmentData);
+        // Busca com debounce
+        if (searchInput) {
+            searchInput.addEventListener('input', () => {
+                clearTimeout(window.searchTimeout);
+                window.searchTimeout = setTimeout(filterAndRenderActivities, 300);
+            });
+        }
+        
+        // Limpar filtros
+        if (clearFiltersBtn) {
+            clearFiltersBtn.addEventListener('click', clearFilters);
         }
     }
     
-    // Salvar enriquecimento de uma atividade (disponível globalmente)
-    window.saveActivityEnrichment = function(activityId) {
-        const linksTextarea = document.getElementById(`links-${activityId}`);
-        const notesTextarea = document.getElementById(`notes-${activityId}`);
-        const prioritySelect = document.getElementById(`priority-${activityId}`);
+    // Inicializar
+    async function init() {
+        showLoading('Conectando ao Supabase...');
         
-        if (!linksTextarea || !notesTextarea || !prioritySelect) return;
-        
-        // Processar links (uma por linha, remover espaços, filtrar vazios)
-        const links = linksTextarea.value
-            .split('\n')
-            .map(link => link.trim())
-            .filter(link => link.length > 0);
-        
-        enrichmentData[activityId] = {
-            links: links,
-            notes: notesTextarea.value.trim(),
-            priority: prioritySelect.value,
-            updatedAt: new Date().toISOString()
-        };
-        
-        saveEnrichmentData();
-        
-        // Feedback visual
-        const button = event ? event.target : linksTextarea;
-        const originalText = button.innerHTML;
-        button.innerHTML = '<i class="fas fa-check"></i> Salvo!';
-        button.style.background = '#2ed573';
-        
-        setTimeout(() => {
-            button.innerHTML = originalText;
-            button.style.background = '';
-        }, 1500);
-    };
-    
-    // Limpar enriquecimento de uma atividade (disponível globalmente)
-    window.clearActivityEnrichment = function(activityId) {
-        if (confirm('Tem certeza que deseja limpar os dados de enriquecimento desta atividade?')) {
-            delete enrichmentData[activityId];
-            saveEnrichmentData();
+        try {
+            // Testar conexão
+            const { data, error } = await supabase
+                .from('atividades_v2')
+                .select('id')
+                .limit(1);
             
-            // Resetar campos
-            const linksTextarea = document.getElementById(`links-${activityId}`);
-            const notesTextarea = document.getElementById(`notes-${activityId}`);
-            const prioritySelect = document.getElementById(`priority-${activityId}`);
+            if (error) throw error;
             
-            if (linksTextarea) linksTextarea.value = '';
-            if (notesTextarea) notesTextarea.value = '';
-            if (prioritySelect) prioritySelect.value = 'medium';
+            // Configurar listeners
+            setupEventListeners();
             
-            // Atualizar badge de prioridade
-            const badge = document.querySelector(`#activity-${activityId} .priority-badge`);
-            if (badge) {
-                badge.className = 'priority-badge priority-medium';
-                badge.textContent = 'MEDIUM';
-            }
+            // Carregar atividades
+            await loadActivities();
+            
+        } catch (error) {
+            showError(`Falha ao conectar ao Supabase: ${error.message}`);
+            console.error('Supabase error:', error);
+        } finally {
+            hideLoading();
         }
-    };
-    
-    // Exportar dados de enriquecimento
-    function exportEnrichmentData() {
-        const exportObj = {
-            gerado_em: new Date().toISOString(),
-            atividades_total: Object.keys(enrichmentData).length,
-            atividades: enrichmentData
-        };
-        
-        const dataStr = JSON.stringify(exportObj, null, 2);
-        const dataBlob = new Blob([dataStr], { type: 'application/json' });
-        const url = URL.createObjectURL(dataBlob);
-        
-        const link = document.createElement('a');
-        link.href = url;
-        link.download = `desplugados-enriquecimento-${new Date().toISOString().split('T')[0]}.json`;
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(url);
-        
-        // Feedback
-        exportBtn.innerHTML = '<i class="fas fa-check"></i> Exportado!';
-        setTimeout(() => {
-            exportBtn.innerHTML = '<i class="fas fa-download"></i> Exportar Enriquecimento';
-        }, 2000);
     }
     
     // Iniciar
-    initAdmin();
+    init();
 });
