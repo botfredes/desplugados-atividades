@@ -53,3 +53,8 @@ temp/
 # Configurações locais
 config.local.json
 settings.local.json
+
+# Dados gerados pelo build
+atividades/gerado/
+atividades/individuais-gerado/
+__pycache__/
