@@ -1,0 +1,224 @@
+{
+  "gerado_em": "2026-03-09T15:56:05.193037",
+  "total": 15,
+  "atividades": [
+    {
+      "id": 71,
+      "nome": "Desfile de Moda",
+      "categoria": "Dramatização e Faz de Conta",
+      "pontuacao": 72.5,
+      "problemas": [
+        "Preparo (10-15 min) > 50% do tempo total (5-10 min)",
+        "Custo 'Baixo (até R$10)' mas muitos itens: 21",
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 3,
+      "tempo": "5-10 min",
+      "preparo": "10-15 min",
+      "faixa_etaria": "3-8 anos"
+    },
+    {
+      "id": 100,
+      "nome": "Cabo de Guerra",
+      "categoria": "Movimento e Coordenação",
+      "pontuacao": 72.5,
+      "problemas": [
+        "Preparo (15-30 min) > 50% do tempo total (20-40 min)",
+        "Custo 'Alto (R$30+)' mas poucos itens: 2",
+        "Atividade Muito Ativa para faixa muito nova: 3-4 anos"
+      ],
+      "qtd_problemas": 3,
+      "tempo": "20-40 min",
+      "preparo": "15-30 min",
+      "faixa_etaria": "3-4 anos"
+    },
+    {
+      "id": 116,
+      "nome": "Caça aos Insetos",
+      "categoria": "Natureza e Exploração",
+      "pontuacao": 72.5,
+      "problemas": [
+        "Preparo (5 min) > 50% do tempo total (5-10 min)",
+        "Custo 'Baixo (até R$10)' mas muitos itens: 6",
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 3,
+      "tempo": "5-10 min",
+      "preparo": "5 min",
+      "faixa_etaria": "3-8 anos"
+    },
+    {
+      "id": 17,
+      "nome": "Teatro de Fantoches",
+      "categoria": "Dramatização e Faz de Conta",
+      "pontuacao": 77.5,
+      "problemas": [
+        "Preparo (5-15 min) > 50% do tempo total (10-20 min)",
+        "Custo 'Baixo (até R$10)' mas muitos itens: 14"
+      ],
+      "qtd_problemas": 2,
+      "tempo": "10-20 min",
+      "preparo": "5-15 min",
+      "faixa_etaria": "5-6 anos"
+    },
+    {
+      "id": 18,
+      "nome": "Tarde de Spa",
+      "categoria": "Atividades de Conexão",
+      "pontuacao": 77.5,
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 6",
+        "Faixa etária muito ampla: 3-8 anos",
+        "Atividade Muito Ativa para faixa muito nova: 3-8 anos"
+      ],
+      "qtd_problemas": 3,
+      "tempo": "40-60 min",
+      "preparo": "15-30 min",
+      "faixa_etaria": "3-8 anos"
+    },
+    {
+      "id": 49,
+      "nome": "Jogo dos 7 Erros Caseiro",
+      "categoria": "Lógica e Matemática",
+      "pontuacao": 77.5,
+      "problemas": [
+        "Preparo (10-20 min) > 50% do tempo total (5-10 min)",
+        "Custo 'Baixo (até R$10)' mas muitos itens: 7"
+      ],
+      "qtd_problemas": 2,
+      "tempo": "5-10 min",
+      "preparo": "10-20 min",
+      "faixa_etaria": "3-4 anos"
+    },
+    {
+      "id": 64,
+      "nome": "Álbum de Memórias",
+      "categoria": "Atividades de Conexão",
+      "pontuacao": 77.5,
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 20",
+        "Faixa etária muito ampla: 3-8 anos",
+        "Atividade Muito Ativa para faixa muito nova: 3-8 anos"
+      ],
+      "qtd_problemas": 3,
+      "tempo": "60+ min",
+      "preparo": "5 min",
+      "faixa_etaria": "3-8 anos"
+    },
+    {
+      "id": 77,
+      "nome": "Mímica em Movimento",
+      "categoria": "Movimento e Coordenação",
+      "pontuacao": 77.5,
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 6",
+        "Faixa etária muito ampla: 3-8 anos",
+        "Atividade Muito Ativa para faixa muito nova: 3-8 anos"
+      ],
+      "qtd_problemas": 3,
+      "tempo": "20-40 min",
+      "preparo": "5 min",
+      "faixa_etaria": "3-8 anos"
+    },
+    {
+      "id": 80,
+      "nome": "Classificação por Formas",
+      "categoria": "Lógica e Matemática",
+      "pontuacao": 77.5,
+      "problemas": [
+        "Preparo (10-20 min) > 50% do tempo total (10-20 min)",
+        "Custo 'Baixo (até R$10)' mas muitos itens: 7"
+      ],
+      "qtd_problemas": 2,
+      "tempo": "10-20 min",
+      "preparo": "10-20 min",
+      "faixa_etaria": "3-4 anos"
+    },
+    {
+      "id": 93,
+      "nome": "Sanduíche Criativo",
+      "categoria": "Culinária e Gastronomia",
+      "pontuacao": 77.5,
+      "problemas": [
+        "Preparo (5 min) > 50% do tempo total (5-10 min)",
+        "Custo 'Baixo (até R$10)' mas muitos itens: 10"
+      ],
+      "qtd_problemas": 2,
+      "tempo": "5-10 min",
+      "preparo": "5 min",
+      "faixa_etaria": "7-8 anos"
+    },
+    {
+      "id": 112,
+      "nome": "Desafio de Construção",
+      "categoria": "Desafios e Missões",
+      "pontuacao": 77.5,
+      "problemas": [
+        "Preparo (5-15 min) > 50% do tempo total (5-10 min)",
+        "Custo 'Baixo (até R$10)' mas muitos itens: 12"
+      ],
+      "qtd_problemas": 2,
+      "tempo": "5-10 min",
+      "preparo": "5-15 min",
+      "faixa_etaria": "3-4 anos"
+    },
+    {
+      "id": 115,
+      "nome": "Caixa Sensorial de Arroz",
+      "categoria": "Atividades Sensoriais",
+      "pontuacao": 77.5,
+      "problemas": [
+        "Preparo (10-15 min) > 50% do tempo total (5-10 min)",
+        "Custo 'Baixo (até R$10)' mas muitos itens: 7"
+      ],
+      "qtd_problemas": 2,
+      "tempo": "5-10 min",
+      "preparo": "10-15 min",
+      "faixa_etaria": "5-6 anos"
+    },
+    {
+      "id": 134,
+      "nome": "Suco Natural",
+      "categoria": "Culinária e Gastronomia",
+      "pontuacao": 77.5,
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 6",
+        "Faixa etária muito ampla: 3-8 anos",
+        "Atividade Muito Ativa para faixa muito nova: 3-8 anos"
+      ],
+      "qtd_problemas": 3,
+      "tempo": "40-60 min",
+      "preparo": "15-30 min",
+      "faixa_etaria": "3-8 anos"
+    },
+    {
+      "id": 148,
+      "nome": "Picolé Natural",
+      "categoria": "Culinária e Gastronomia",
+      "pontuacao": 77.5,
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 11",
+        "Faixa etária muito ampla: 3-8 anos",
+        "Atividade Muito Ativa para faixa muito nova: 3-8 anos"
+      ],
+      "qtd_problemas": 3,
+      "tempo": "40-60 min",
+      "preparo": "10-15 min",
+      "faixa_etaria": "3-8 anos"
+    },
+    {
+      "id": "-59",
+      "nome": "Detetive por um Dia (Consolidada)",
+      "categoria": "Desafios e Missões",
+      "pontuacao": 77.5,
+      "problemas": [
+        "Preparo (5 min) > 50% do tempo total (5-10 min)",
+        "Custo 'Baixo (até R$10)' mas muitos itens: 13"
+      ],
+      "qtd_problemas": 2,
+      "tempo": "5-10 min",
+      "preparo": "5 min",
+      "faixa_etaria": "3-4 anos"
+    }
+  ]
+}

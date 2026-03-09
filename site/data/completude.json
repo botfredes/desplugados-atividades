@@ -1,0 +1,2623 @@
+{
+  "gerado_em": "2026-03-09T15:56:05.189168",
+  "estatisticas": {
+    "total": 143,
+    "problematicas": 15,
+    "completas": 128,
+    "score_medio": 92.17
+  },
+  "atividades": [
+    {
+      "id": 71,
+      "nome": "Desfile de Moda",
+      "categoria": "Dramatização e Faz de Conta",
+      "pontuacao": 72.5,
+      "status": "REGULAR",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "5-10 min",
+      "preparo": "10-15 min",
+      "bagunca": "Alta",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Preparo (10-15 min) > 50% do tempo total (5-10 min)",
+        "Custo 'Baixo (até R$10)' mas muitos itens: 21",
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 3,
+      "problematica": true
+    },
+    {
+      "id": 100,
+      "nome": "Cabo de Guerra",
+      "categoria": "Movimento e Coordenação",
+      "pontuacao": 72.5,
+      "status": "REGULAR",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "20-40 min",
+      "preparo": "15-30 min",
+      "bagunca": "Nenhuma",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Preparo (15-30 min) > 50% do tempo total (20-40 min)",
+        "Custo 'Alto (R$30+)' mas poucos itens: 2",
+        "Atividade Muito Ativa para faixa muito nova: 3-4 anos"
+      ],
+      "qtd_problemas": 3,
+      "problematica": true
+    },
+    {
+      "id": 116,
+      "nome": "Caça aos Insetos",
+      "categoria": "Natureza e Exploração",
+      "pontuacao": 72.5,
+      "status": "REGULAR",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "5-10 min",
+      "preparo": "5 min",
+      "bagunca": "Nenhuma",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Preparo (5 min) > 50% do tempo total (5-10 min)",
+        "Custo 'Baixo (até R$10)' mas muitos itens: 6",
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 3,
+      "problematica": true
+    },
+    {
+      "id": 17,
+      "nome": "Teatro de Fantoches",
+      "categoria": "Dramatização e Faz de Conta",
+      "pontuacao": 77.5,
+      "status": "REGULAR",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "10-20 min",
+      "preparo": "5-15 min",
+      "bagunca": "Alta",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Preparo (5-15 min) > 50% do tempo total (10-20 min)",
+        "Custo 'Baixo (até R$10)' mas muitos itens: 14"
+      ],
+      "qtd_problemas": 2,
+      "problematica": true
+    },
+    {
+      "id": 18,
+      "nome": "Tarde de Spa",
+      "categoria": "Atividades de Conexão",
+      "pontuacao": 77.5,
+      "status": "REGULAR",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "40-60 min",
+      "preparo": "15-30 min",
+      "bagunca": "Média",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 6",
+        "Faixa etária muito ampla: 3-8 anos",
+        "Atividade Muito Ativa para faixa muito nova: 3-8 anos"
+      ],
+      "qtd_problemas": 3,
+      "problematica": true
+    },
+    {
+      "id": 49,
+      "nome": "Jogo dos 7 Erros Caseiro",
+      "categoria": "Lógica e Matemática",
+      "pontuacao": 77.5,
+      "status": "REGULAR",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "5-10 min",
+      "preparo": "10-20 min",
+      "bagunca": "Alta",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Preparo (10-20 min) > 50% do tempo total (5-10 min)",
+        "Custo 'Baixo (até R$10)' mas muitos itens: 7"
+      ],
+      "qtd_problemas": 2,
+      "problematica": true
+    },
+    {
+      "id": 64,
+      "nome": "Álbum de Memórias",
+      "categoria": "Atividades de Conexão",
+      "pontuacao": 77.5,
+      "status": "REGULAR",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "60+ min",
+      "preparo": "5 min",
+      "bagunca": "Média",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 20",
+        "Faixa etária muito ampla: 3-8 anos",
+        "Atividade Muito Ativa para faixa muito nova: 3-8 anos"
+      ],
+      "qtd_problemas": 3,
+      "problematica": true
+    },
+    {
+      "id": 77,
+      "nome": "Mímica em Movimento",
+      "categoria": "Movimento e Coordenação",
+      "pontuacao": 77.5,
+      "status": "REGULAR",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "20-40 min",
+      "preparo": "5 min",
+      "bagunca": "Alta",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 6",
+        "Faixa etária muito ampla: 3-8 anos",
+        "Atividade Muito Ativa para faixa muito nova: 3-8 anos"
+      ],
+      "qtd_problemas": 3,
+      "problematica": true
+    },
+    {
+      "id": 80,
+      "nome": "Classificação por Formas",
+      "categoria": "Lógica e Matemática",
+      "pontuacao": 77.5,
+      "status": "REGULAR",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "10-20 min",
+      "preparo": "10-20 min",
+      "bagunca": "Baixa",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Preparo (10-20 min) > 50% do tempo total (10-20 min)",
+        "Custo 'Baixo (até R$10)' mas muitos itens: 7"
+      ],
+      "qtd_problemas": 2,
+      "problematica": true
+    },
+    {
+      "id": 93,
+      "nome": "Sanduíche Criativo",
+      "categoria": "Culinária e Gastronomia",
+      "pontuacao": 77.5,
+      "status": "REGULAR",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "5-10 min",
+      "preparo": "5 min",
+      "bagunca": "Alta",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Preparo (5 min) > 50% do tempo total (5-10 min)",
+        "Custo 'Baixo (até R$10)' mas muitos itens: 10"
+      ],
+      "qtd_problemas": 2,
+      "problematica": true
+    },
+    {
+      "id": 112,
+      "nome": "Desafio de Construção",
+      "categoria": "Desafios e Missões",
+      "pontuacao": 77.5,
+      "status": "REGULAR",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "5-10 min",
+      "preparo": "5-15 min",
+      "bagunca": "Alta",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Preparo (5-15 min) > 50% do tempo total (5-10 min)",
+        "Custo 'Baixo (até R$10)' mas muitos itens: 12"
+      ],
+      "qtd_problemas": 2,
+      "problematica": true
+    },
+    {
+      "id": 115,
+      "nome": "Caixa Sensorial de Arroz",
+      "categoria": "Atividades Sensoriais",
+      "pontuacao": 77.5,
+      "status": "REGULAR",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "5-10 min",
+      "preparo": "10-15 min",
+      "bagunca": "Nenhuma",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Preparo (10-15 min) > 50% do tempo total (5-10 min)",
+        "Custo 'Baixo (até R$10)' mas muitos itens: 7"
+      ],
+      "qtd_problemas": 2,
+      "problematica": true
+    },
+    {
+      "id": 134,
+      "nome": "Suco Natural",
+      "categoria": "Culinária e Gastronomia",
+      "pontuacao": 77.5,
+      "status": "REGULAR",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "40-60 min",
+      "preparo": "15-30 min",
+      "bagunca": "Nenhuma",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 6",
+        "Faixa etária muito ampla: 3-8 anos",
+        "Atividade Muito Ativa para faixa muito nova: 3-8 anos"
+      ],
+      "qtd_problemas": 3,
+      "problematica": true
+    },
+    {
+      "id": 148,
+      "nome": "Picolé Natural",
+      "categoria": "Culinária e Gastronomia",
+      "pontuacao": 77.5,
+      "status": "REGULAR",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "40-60 min",
+      "preparo": "10-15 min",
+      "bagunca": "Baixa",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 11",
+        "Faixa etária muito ampla: 3-8 anos",
+        "Atividade Muito Ativa para faixa muito nova: 3-8 anos"
+      ],
+      "qtd_problemas": 3,
+      "problematica": true
+    },
+    {
+      "id": "-59",
+      "nome": "Detetive por um Dia (Consolidada)",
+      "categoria": "Desafios e Missões",
+      "pontuacao": 77.5,
+      "status": "REGULAR",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "5-10 min",
+      "preparo": "5 min",
+      "bagunca": "Média",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Preparo (5 min) > 50% do tempo total (5-10 min)",
+        "Custo 'Baixo (até R$10)' mas muitos itens: 13"
+      ],
+      "qtd_problemas": 2,
+      "problematica": true
+    },
+    {
+      "id": 53,
+      "nome": "Desafio Culinário",
+      "categoria": "Desafios e Missões",
+      "pontuacao": 80.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "5-10 min",
+      "preparo": "5 min",
+      "bagunca": "Média",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Preparo (5 min) > 50% do tempo total (5-10 min)",
+        "Faixa etária muito ampla: 3-8 anos",
+        "Atividade Muito Ativa para faixa muito nova: 3-8 anos"
+      ],
+      "qtd_problemas": 3,
+      "problematica": false
+    },
+    {
+      "id": 120,
+      "nome": "Oficina Mecânica",
+      "categoria": "Dramatização e Faz de Conta",
+      "pontuacao": 80.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "20-40 min",
+      "preparo": "15-30 min",
+      "bagunca": "Nenhuma",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Preparo (15-30 min) > 50% do tempo total (20-40 min)",
+        "Faixa etária muito ampla: 3-8 anos",
+        "Atividade Muito Ativa para faixa muito nova: 3-8 anos"
+      ],
+      "qtd_problemas": 3,
+      "problematica": false
+    },
+    {
+      "id": 26,
+      "nome": "Estação Espacial",
+      "categoria": "Dramatização e Faz de Conta",
+      "pontuacao": 82.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "20-40 min",
+      "preparo": "10-20 min",
+      "bagunca": "Baixa",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 12",
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 2,
+      "problematica": false
+    },
+    {
+      "id": 34,
+      "nome": "Terrário em Garrafa",
+      "categoria": "Natureza e Exploração",
+      "pontuacao": 82.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "60+ min",
+      "preparo": "5 min",
+      "bagunca": "Média",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 9",
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 2,
+      "problematica": false
+    },
+    {
+      "id": 84,
+      "nome": "Arte com Fita Adesiva",
+      "categoria": "Artes Experimentais e Sensoriais",
+      "pontuacao": 82.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "20-40 min",
+      "preparo": "5 min",
+      "bagunca": "Nenhuma",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 9",
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 2,
+      "problematica": false
+    },
+    {
+      "id": 89,
+      "nome": "Acampamento na Sala",
+      "categoria": "Atividades de Conexão",
+      "pontuacao": 82.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "20-40 min",
+      "preparo": "5-10 min",
+      "bagunca": "Alta",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 6",
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 2,
+      "problematica": false
+    },
+    {
+      "id": 6,
+      "nome": "Ludo Caseiro",
+      "categoria": "Jogos de Tabuleiro e Cartas",
+      "pontuacao": 85.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "10-20 min",
+      "preparo": "10-20 min",
+      "bagunca": "Média",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Preparo (10-20 min) > 50% do tempo total (10-20 min)",
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 2,
+      "problematica": false
+    },
+    {
+      "id": 8,
+      "nome": "Sudoku Visual",
+      "categoria": "Lógica e Matemática",
+      "pontuacao": 85.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "5-10 min",
+      "preparo": "10-20 min",
+      "bagunca": "Alta",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Preparo (10-20 min) > 50% do tempo total (5-10 min)",
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 2,
+      "problematica": false
+    },
+    {
+      "id": 32,
+      "nome": "Criação de Livro Ilustrado",
+      "categoria": "Leitura e Narrativa",
+      "pontuacao": 85.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "5-10 min",
+      "preparo": "15-30 min",
+      "bagunca": "Média",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Preparo (15-30 min) > 50% do tempo total (5-10 min)",
+        "Atividade Muito Ativa para faixa muito nova: 3-4 anos"
+      ],
+      "qtd_problemas": 2,
+      "problematica": false
+    },
+    {
+      "id": 86,
+      "nome": "Exploração de Texturas",
+      "categoria": "Atividades Sensoriais",
+      "pontuacao": 85.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "5-10 min",
+      "preparo": "5 min",
+      "bagunca": "Alta",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Preparo (5 min) > 50% do tempo total (5-10 min)",
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 2,
+      "problematica": false
+    },
+    {
+      "id": 97,
+      "nome": "Exploração Sensorial ao Ar Livre",
+      "categoria": "Natureza e Exploração",
+      "pontuacao": 85.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "10-20 min",
+      "preparo": "10-20 min",
+      "bagunca": "Média",
+      "custo": "Grátis",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Preparo (10-20 min) > 50% do tempo total (10-20 min)",
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 2,
+      "problematica": false
+    },
+    {
+      "id": 98,
+      "nome": "Podcast Infantil",
+      "categoria": "Leitura e Narrativa",
+      "pontuacao": 85.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "10-20 min",
+      "preparo": "10-15 min",
+      "bagunca": "Média",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Preparo (10-15 min) > 50% do tempo total (10-20 min)",
+        "Atividade Muito Ativa para faixa muito nova: 3-4 anos"
+      ],
+      "qtd_problemas": 2,
+      "problematica": false
+    },
+    {
+      "id": 7,
+      "nome": "Pintura Simétrica (Dobradura)",
+      "categoria": "Artes Experimentais e Sensoriais",
+      "pontuacao": 87.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "10-20 min",
+      "preparo": "5 min",
+      "bagunca": "Nenhuma",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 8"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 9,
+      "nome": "Casa de Caixas de Papelão",
+      "categoria": "Construção e Engenharia",
+      "pontuacao": 87.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "40-60 min",
+      "preparo": "5-15 min",
+      "bagunca": "Média",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 17"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 39,
+      "nome": "Pintura com Esponjas Naturais",
+      "categoria": "Artes Experimentais e Sensoriais",
+      "pontuacao": 87.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "20-40 min",
+      "preparo": "10-15 min",
+      "bagunca": "Alta",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 9"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 63,
+      "nome": "Jogo da Memória DIY",
+      "categoria": "Lógica e Matemática",
+      "pontuacao": 87.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "20-40 min",
+      "preparo": "5-15 min",
+      "bagunca": "Nenhuma",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 8"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 72,
+      "nome": "Corrida do Saco",
+      "categoria": "Movimento e Coordenação",
+      "pontuacao": 87.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "40-60 min",
+      "preparo": "5-10 min",
+      "bagunca": "Alta",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Custo 'Alto (R$30+)' mas poucos itens: 2"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 76,
+      "nome": "Contação com Objetos",
+      "categoria": "Leitura e Narrativa",
+      "pontuacao": 87.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "40-60 min",
+      "preparo": "5-10 min",
+      "bagunca": "Média",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 23"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 78,
+      "nome": "Aquarela com Sal",
+      "categoria": "Artes Experimentais e Sensoriais",
+      "pontuacao": 87.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "40-60 min",
+      "preparo": "5-15 min",
+      "bagunca": "Nenhuma",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 11"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 79,
+      "nome": "Escultura de Papel Machê",
+      "categoria": "Artes Experimentais e Sensoriais",
+      "pontuacao": 87.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "20-40 min",
+      "preparo": "5 min",
+      "bagunca": "Baixa",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 16"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 82,
+      "nome": "Escola de Brinquedo",
+      "categoria": "Dramatização e Faz de Conta",
+      "pontuacao": 87.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "60+ min",
+      "preparo": "5-10 min",
+      "bagunca": "Alta",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 21"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 99,
+      "nome": "Escape Room Caseiro",
+      "categoria": "Desafios e Missões",
+      "pontuacao": 87.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "10-20 min",
+      "preparo": "5 min",
+      "bagunca": "Alta",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 8"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 101,
+      "nome": "Instrumentos de Sucata",
+      "categoria": "Música e Ritmo",
+      "pontuacao": 87.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "40-60 min",
+      "preparo": "10-15 min",
+      "bagunca": "Nenhuma",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 6"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 104,
+      "nome": "Gelo que Não Derrete",
+      "categoria": "Ciências e Experimentos",
+      "pontuacao": 87.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "10-20 min",
+      "preparo": "5 min",
+      "bagunca": "Média",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 7"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 123,
+      "nome": "Brigadeiro",
+      "categoria": "Culinária e Gastronomia",
+      "pontuacao": 87.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "20-40 min",
+      "preparo": "5-15 min",
+      "bagunca": "Baixa",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 7"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 125,
+      "nome": "Biscoitos Decorados",
+      "categoria": "Culinária e Gastronomia",
+      "pontuacao": 87.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "20-40 min",
+      "preparo": "5 min",
+      "bagunca": "Média",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 20"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 135,
+      "nome": "Salada de Frutas",
+      "categoria": "Culinária e Gastronomia",
+      "pontuacao": 87.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "60+ min",
+      "preparo": "5 min",
+      "bagunca": "Alta",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 10"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 144,
+      "nome": "Uno Artesanal",
+      "categoria": "Jogos de Tabuleiro e Cartas",
+      "pontuacao": 87.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "40-60 min",
+      "preparo": "5 min",
+      "bagunca": "Média",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 12"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 152,
+      "nome": "Colagem de Texturas",
+      "categoria": "Artes Experimentais e Sensoriais",
+      "pontuacao": 87.5,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "60+ min",
+      "preparo": "5-10 min",
+      "bagunca": "Média",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Custo 'Baixo (até R$10)' mas muitos itens: 13"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 19,
+      "nome": "Jogo das Cadeiras Musical",
+      "categoria": "Música e Ritmo",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "5-10 min",
+      "preparo": "5 min",
+      "bagunca": "Alta",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Preparo (5 min) > 50% do tempo total (5-10 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 25,
+      "nome": "Diário Ilustrado",
+      "categoria": "Leitura e Narrativa",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "5-10 min",
+      "preparo": "15-30 min",
+      "bagunca": "Nenhuma",
+      "custo": "Grátis",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Preparo (15-30 min) > 50% do tempo total (5-10 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 31,
+      "nome": "Circuito de Obstáculos Indoor",
+      "categoria": "Movimento e Coordenação",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "10-20 min",
+      "preparo": "10-20 min",
+      "bagunca": "Média",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Preparo (10-20 min) > 50% do tempo total (10-20 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 38,
+      "nome": "Yoga para Crianças",
+      "categoria": "Movimento e Coordenação",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "5-10 min",
+      "preparo": "5 min",
+      "bagunca": "Média",
+      "custo": "Grátis",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Preparo (5 min) > 50% do tempo total (5-10 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 40,
+      "nome": "Supermercado Caseiro",
+      "categoria": "Dramatização e Faz de Conta",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "10-20 min",
+      "preparo": "10-15 min",
+      "bagunca": "Alta",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Preparo (10-15 min) > 50% do tempo total (10-20 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 42,
+      "nome": "Cartões Artesanais",
+      "categoria": "Projetos Criativos",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "5-10 min",
+      "preparo": "10-20 min",
+      "bagunca": "Alta",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Preparo (10-20 min) > 50% do tempo total (5-10 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 51,
+      "nome": "Arte com Elementos Naturais",
+      "categoria": "Natureza e Exploração",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "5-10 min",
+      "preparo": "5-10 min",
+      "bagunca": "Baixa",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Preparo (5-10 min) > 50% do tempo total (5-10 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 57,
+      "nome": "Massagem com Bolinhas",
+      "categoria": "Atividades Sensoriais",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "5-10 min",
+      "preparo": "5-10 min",
+      "bagunca": "Nenhuma",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Preparo (5-10 min) > 50% do tempo total (5-10 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 58,
+      "nome": "Árvore Genealógica",
+      "categoria": "Projetos Criativos",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "10-20 min",
+      "preparo": "10-20 min",
+      "bagunca": "Média",
+      "custo": "Grátis",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Preparo (10-20 min) > 50% do tempo total (10-20 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 60,
+      "nome": "Plantação de Feijão",
+      "categoria": "Ciências e Experimentos",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "5-10 min",
+      "preparo": "5-15 min",
+      "bagunca": "Nenhuma",
+      "custo": "Grátis",
+      "supervisao": "Constante",
+      "problemas": [
+        "Preparo (5-15 min) > 50% do tempo total (5-10 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 61,
+      "nome": "Reconto com Fantoches",
+      "categoria": "Leitura e Narrativa",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "5-10 min",
+      "preparo": "10-15 min",
+      "bagunca": "Alta",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Preparo (10-15 min) > 50% do tempo total (5-10 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 65,
+      "nome": "Comedouro de Pássaros",
+      "categoria": "Natureza e Exploração",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "10-20 min",
+      "preparo": "5-15 min",
+      "bagunca": "Baixa",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Preparo (5-15 min) > 50% do tempo total (10-20 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 66,
+      "nome": "Batalha Naval",
+      "categoria": "Jogos de Tabuleiro e Cartas",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "10-20 min",
+      "preparo": "5-15 min",
+      "bagunca": "Alta",
+      "custo": "Grátis",
+      "supervisao": "Constante",
+      "problemas": [
+        "Preparo (5-15 min) > 50% do tempo total (10-20 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 67,
+      "nome": "Pista de Bolinhas",
+      "categoria": "Construção e Engenharia",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "5-10 min",
+      "preparo": "5 min",
+      "bagunca": "Média",
+      "custo": "Grátis",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Preparo (5 min) > 50% do tempo total (5-10 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 75,
+      "nome": "Biblioteca Caseira",
+      "categoria": "Leitura e Narrativa",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "10-20 min",
+      "preparo": "10-20 min",
+      "bagunca": "Média",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Preparo (10-20 min) > 50% do tempo total (10-20 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 85,
+      "nome": "Dança Livre com Lenços",
+      "categoria": "Movimento e Coordenação",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "5-10 min",
+      "preparo": "15-30 min",
+      "bagunca": "Baixa",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Preparo (15-30 min) > 50% do tempo total (5-10 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 87,
+      "nome": "Pizza Caseira",
+      "categoria": "Culinária e Gastronomia",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "5-10 min",
+      "preparo": "10-15 min",
+      "bagunca": "Nenhuma",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Preparo (10-15 min) > 50% do tempo total (5-10 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 94,
+      "nome": "Tornado na Garrafa",
+      "categoria": "Ciências e Experimentos",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "5-10 min",
+      "preparo": "15-30 min",
+      "bagunca": "Baixa",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Preparo (15-30 min) > 50% do tempo total (5-10 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 102,
+      "nome": "Contagem com Objetos",
+      "categoria": "Lógica e Matemática",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "5-10 min",
+      "preparo": "5-15 min",
+      "bagunca": "Nenhuma",
+      "custo": "Grátis",
+      "supervisao": "Constante",
+      "problemas": [
+        "Preparo (5-15 min) > 50% do tempo total (5-10 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 107,
+      "nome": "Consultório Médico",
+      "categoria": "Dramatização e Faz de Conta",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "10-20 min",
+      "preparo": "5 min",
+      "bagunca": "Baixa",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Faixa etária muito ampla: 3-8 anos",
+        "Atividade Muito Ativa para faixa muito nova: 3-8 anos"
+      ],
+      "qtd_problemas": 2,
+      "problematica": false
+    },
+    {
+      "id": 137,
+      "nome": "Scrapbook",
+      "categoria": "Projetos Criativos",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "10-20 min",
+      "preparo": "10-15 min",
+      "bagunca": "Alta",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Preparo (10-15 min) > 50% do tempo total (10-20 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 140,
+      "nome": "Água com Corante",
+      "categoria": "Atividades Sensoriais",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "5-10 min",
+      "preparo": "5-10 min",
+      "bagunca": "Média",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Preparo (5-10 min) > 50% do tempo total (5-10 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 142,
+      "nome": "Mural de Sonhos",
+      "categoria": "Projetos Criativos",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "5-10 min",
+      "preparo": "15-30 min",
+      "bagunca": "Média",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Preparo (15-30 min) > 50% do tempo total (5-10 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 143,
+      "nome": "Pintura com Dedos",
+      "categoria": "Atividades Sensoriais",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "10-20 min",
+      "preparo": "15-30 min",
+      "bagunca": "Média",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Preparo (15-30 min) > 50% do tempo total (10-20 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 151,
+      "nome": "Arco-íris de Densidade",
+      "categoria": "Ciências e Experimentos",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "5-10 min",
+      "preparo": "5-15 min",
+      "bagunca": "Média",
+      "custo": "Grátis",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Preparo (5-15 min) > 50% do tempo total (5-10 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 153,
+      "nome": "Quebra-Cabeça Caseiro",
+      "categoria": "Lógica e Matemática",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "10-20 min",
+      "preparo": "15-30 min",
+      "bagunca": "Baixa",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Preparo (15-30 min) > 50% do tempo total (10-20 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": "-11",
+      "nome": "Avião de Papel (Consolidada)",
+      "categoria": "Construção e Engenharia",
+      "pontuacao": 90.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "5-10 min",
+      "preparo": "5 min",
+      "bagunca": "Média",
+      "custo": "Grátis",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Preparo (5 min) > 50% do tempo total (5-10 min)"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 1,
+      "nome": "Teatro de Sombras Chinesas",
+      "categoria": "Dramatização e Faz de Conta",
+      "pontuacao": 95.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "20-40 min",
+      "preparo": "5 min",
+      "bagunca": "Média",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 20,
+      "nome": "Restaurante de Faz de Conta",
+      "categoria": "Dramatização e Faz de Conta",
+      "pontuacao": 95.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "60+ min",
+      "preparo": "5-10 min",
+      "bagunca": "Baixa",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 27,
+      "nome": "Piquenique Indoor",
+      "categoria": "Atividades de Conexão",
+      "pontuacao": 95.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "20-40 min",
+      "preparo": "10-15 min",
+      "bagunca": "Média",
+      "custo": "Grátis",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Atividade Muito Ativa para faixa muito nova: 3-4 anos"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 28,
+      "nome": "Damas com Tampinhas",
+      "categoria": "Jogos de Tabuleiro e Cartas",
+      "pontuacao": 95.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "20-40 min",
+      "preparo": "5-15 min",
+      "bagunca": "Média",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 30,
+      "nome": "Pular Corda Criativo",
+      "categoria": "Movimento e Coordenação",
+      "pontuacao": 95.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "60+ min",
+      "preparo": "5-15 min",
+      "bagunca": "Alta",
+      "custo": "Grátis",
+      "supervisao": "Constante",
+      "problemas": [
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 35,
+      "nome": "Torre de Palitos",
+      "categoria": "Construção e Engenharia",
+      "pontuacao": 95.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "10-20 min",
+      "preparo": "5-10 min",
+      "bagunca": "Baixa",
+      "custo": "Grátis",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 37,
+      "nome": "Concerto Familiar",
+      "categoria": "Música e Ritmo",
+      "pontuacao": 95.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "40-60 min",
+      "preparo": "10-15 min",
+      "bagunca": "Nenhuma",
+      "custo": "Grátis",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 46,
+      "nome": "Forte de Almofadas",
+      "categoria": "Construção e Engenharia",
+      "pontuacao": 95.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "60+ min",
+      "preparo": "15-30 min",
+      "bagunca": "Alta",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Atividade Muito Ativa para faixa muito nova: 3-4 anos"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 55,
+      "nome": "Sessão de Cinema Caseira",
+      "categoria": "Atividades de Conexão",
+      "pontuacao": 95.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "40-60 min",
+      "preparo": "5-15 min",
+      "bagunca": "Alta",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 68,
+      "nome": "Cidade de Blocos",
+      "categoria": "Construção e Engenharia",
+      "pontuacao": 95.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "40-60 min",
+      "preparo": "15-30 min",
+      "bagunca": "Média",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Atividade Muito Ativa para faixa muito nova: 3-4 anos"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 74,
+      "nome": "Clube do Livro",
+      "categoria": "Leitura e Narrativa",
+      "pontuacao": 95.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "20-40 min",
+      "preparo": "5 min",
+      "bagunca": "Nenhuma",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 83,
+      "nome": "Banho de Espuma Colorida",
+      "categoria": "Atividades Sensoriais",
+      "pontuacao": 95.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "10-20 min",
+      "preparo": "5-10 min",
+      "bagunca": "Média",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 92,
+      "nome": "Salão de Beleza",
+      "categoria": "Dramatização e Faz de Conta",
+      "pontuacao": 95.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "60+ min",
+      "preparo": "5-15 min",
+      "bagunca": "Média",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 103,
+      "nome": "Tangram de Papel",
+      "categoria": "Lógica e Matemática",
+      "pontuacao": 95.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "10-20 min",
+      "preparo": "5 min",
+      "bagunca": "Alta",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 106,
+      "nome": "Projeto em Dupla",
+      "categoria": "Atividades de Conexão",
+      "pontuacao": 95.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "60+ min",
+      "preparo": "10-15 min",
+      "bagunca": "Alta",
+      "custo": "Grátis",
+      "supervisao": "Constante",
+      "problemas": [
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 131,
+      "nome": "Barco de Garrafa PET",
+      "categoria": "Construção e Engenharia",
+      "pontuacao": 95.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "20-40 min",
+      "preparo": "10-15 min",
+      "bagunca": "Alta",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 147,
+      "nome": "Dominó Caseiro",
+      "categoria": "Jogos de Tabuleiro e Cartas",
+      "pontuacao": 95.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-8 anos",
+      "tempo": "40-60 min",
+      "preparo": "10-20 min",
+      "bagunca": "Média",
+      "custo": "Grátis",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Faixa etária muito ampla: 3-8 anos"
+      ],
+      "qtd_problemas": 1,
+      "problematica": false
+    },
+    {
+      "id": 2,
+      "nome": "Caça ao Tesouro com Mapa Pirata",
+      "categoria": "Desafios e Missões",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "40-60 min",
+      "preparo": "15-30 min",
+      "bagunca": "Baixa",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 3,
+      "nome": "Laboratório de Massinha Sensorial",
+      "categoria": "Artes Experimentais e Sensoriais",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "40-60 min",
+      "preparo": "5-10 min",
+      "bagunca": "Média",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 5,
+      "nome": "Pintura com Carimbos de Batata",
+      "categoria": "Artes Experimentais e Sensoriais",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "60+ min",
+      "preparo": "5-15 min",
+      "bagunca": "Baixa",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 12,
+      "nome": "Argila Natural",
+      "categoria": "Atividades Sensoriais",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "40-60 min",
+      "preparo": "10-15 min",
+      "bagunca": "Alta",
+      "custo": "Grátis",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 14,
+      "nome": "Acampamento Indoor",
+      "categoria": "Dramatização e Faz de Conta",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "10-20 min",
+      "preparo": "5 min",
+      "bagunca": "Média",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 15,
+      "nome": "Maratona de Tarefas",
+      "categoria": "Desafios e Missões",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "20-40 min",
+      "preparo": "5-10 min",
+      "bagunca": "Nenhuma",
+      "custo": "Grátis",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 16,
+      "nome": "Pintura com Gelo Colorido",
+      "categoria": "Artes Experimentais e Sensoriais",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "10-20 min",
+      "preparo": "5 min",
+      "bagunca": "Baixa",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 21,
+      "nome": "Diário de Gratidão",
+      "categoria": "Projetos Criativos",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "60+ min",
+      "preparo": "10-20 min",
+      "bagunca": "Baixa",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 22,
+      "nome": "Castelo de Copos",
+      "categoria": "Construção e Engenharia",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "20-40 min",
+      "preparo": "5-10 min",
+      "bagunca": "Média",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 23,
+      "nome": "Olimpíadas Caseiras",
+      "categoria": "Desafios e Missões",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "60+ min",
+      "preparo": "10-20 min",
+      "bagunca": "Baixa",
+      "custo": "Grátis",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 24,
+      "nome": "Herbário Caseiro",
+      "categoria": "Natureza e Exploração",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "60+ min",
+      "preparo": "10-15 min",
+      "bagunca": "Nenhuma",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 29,
+      "nome": "Jogo da Velha Gigante",
+      "categoria": "Jogos de Tabuleiro e Cartas",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "10-20 min",
+      "preparo": "5 min",
+      "bagunca": "Média",
+      "custo": "Grátis",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 33,
+      "nome": "Entrevista Familiar",
+      "categoria": "Atividades de Conexão",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "10-20 min",
+      "preparo": "5 min",
+      "bagunca": "Baixa",
+      "custo": "Grátis",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 41,
+      "nome": "Twister Caseiro",
+      "categoria": "Movimento e Coordenação",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "40-60 min",
+      "preparo": "10-15 min",
+      "bagunca": "Alta",
+      "custo": "Grátis",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 43,
+      "nome": "Caixa Misteriosa",
+      "categoria": "Atividades Sensoriais",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "60+ min",
+      "preparo": "10-20 min",
+      "bagunca": "Nenhuma",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 44,
+      "nome": "Arte com Bolhas de Sabão",
+      "categoria": "Artes Experimentais e Sensoriais",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "20-40 min",
+      "preparo": "5 min",
+      "bagunca": "Média",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 45,
+      "nome": "Mapa de Aventuras",
+      "categoria": "Projetos Criativos",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "60+ min",
+      "preparo": "10-20 min",
+      "bagunca": "Nenhuma",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 47,
+      "nome": "Padrões com Blocos",
+      "categoria": "Lógica e Matemática",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "60+ min",
+      "preparo": "5-10 min",
+      "bagunca": "Nenhuma",
+      "custo": "Grátis",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 48,
+      "nome": "Panquecas Coloridas",
+      "categoria": "Culinária e Gastronomia",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "40-60 min",
+      "preparo": "10-20 min",
+      "bagunca": "Média",
+      "custo": "Grátis",
+      "supervisao": "Constante",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 50,
+      "nome": "Cristais de Açúcar",
+      "categoria": "Ciências e Experimentos",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "20-40 min",
+      "preparo": "5 min",
+      "bagunca": "Alta",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 52,
+      "nome": "Gincana Familiar",
+      "categoria": "Desafios e Missões",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "10-20 min",
+      "preparo": "5 min",
+      "bagunca": "Baixa",
+      "custo": "Grátis",
+      "supervisao": "Constante",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 54,
+      "nome": "Jantar Temático",
+      "categoria": "Atividades de Conexão",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "20-40 min",
+      "preparo": "5 min",
+      "bagunca": "Nenhuma",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 56,
+      "nome": "Calendário Ilustrado",
+      "categoria": "Projetos Criativos",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "60+ min",
+      "preparo": "5 min",
+      "bagunca": "Nenhuma",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 62,
+      "nome": "Cápsula do Tempo",
+      "categoria": "Projetos Criativos",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "40-60 min",
+      "preparo": "10-15 min",
+      "bagunca": "Nenhuma",
+      "custo": "Grátis",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 69,
+      "nome": "Catapulta de Palitos",
+      "categoria": "Construção e Engenharia",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "10-20 min",
+      "preparo": "5 min",
+      "bagunca": "Baixa",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 70,
+      "nome": "Coleção de Folhas",
+      "categoria": "Natureza e Exploração",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "40-60 min",
+      "preparo": "5-10 min",
+      "bagunca": "Média",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 73,
+      "nome": "Vulcão de Bicarbonato",
+      "categoria": "Ciências e Experimentos",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "60+ min",
+      "preparo": "5-15 min",
+      "bagunca": "Baixa",
+      "custo": "Grátis",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 81,
+      "nome": "Álbum de Fotos Familiar",
+      "categoria": "Projetos Criativos",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "20-40 min",
+      "preparo": "10-15 min",
+      "bagunca": "Baixa",
+      "custo": "Grátis",
+      "supervisao": "Constante",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 88,
+      "nome": "Jogo de Cartas Personalizado",
+      "categoria": "Jogos de Tabuleiro e Cartas",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "40-60 min",
+      "preparo": "10-15 min",
+      "bagunca": "Média",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 90,
+      "nome": "Jogo de Tabuleiro Inventado",
+      "categoria": "Jogos de Tabuleiro e Cartas",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "20-40 min",
+      "preparo": "10-15 min",
+      "bagunca": "Nenhuma",
+      "custo": "Grátis",
+      "supervisao": "Constante",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 91,
+      "nome": "Missão Impossível",
+      "categoria": "Desafios e Missões",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "60+ min",
+      "preparo": "10-20 min",
+      "bagunca": "Média",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 95,
+      "nome": "Gelatina Artística",
+      "categoria": "Culinária e Gastronomia",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "20-40 min",
+      "preparo": "10-15 min",
+      "bagunca": "Nenhuma",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 105,
+      "nome": "Espetinho de Frutas",
+      "categoria": "Culinária e Gastronomia",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "20-40 min",
+      "preparo": "5-10 min",
+      "bagunca": "Alta",
+      "custo": "Grátis",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 108,
+      "nome": "Balão Auto-Inflável",
+      "categoria": "Ciências e Experimentos",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "40-60 min",
+      "preparo": "10-15 min",
+      "bagunca": "Média",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 110,
+      "nome": "Sequências de Cores",
+      "categoria": "Lógica e Matemática",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "60+ min",
+      "preparo": "5-15 min",
+      "bagunca": "Alta",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 111,
+      "nome": "Amarelinha Criativa",
+      "categoria": "Movimento e Coordenação",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "20-40 min",
+      "preparo": "5-15 min",
+      "bagunca": "Alta",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 113,
+      "nome": "Slime Caseiro",
+      "categoria": "Ciências e Experimentos",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "40-60 min",
+      "preparo": "15-30 min",
+      "bagunca": "Baixa",
+      "custo": "Grátis",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 114,
+      "nome": "Pintura com Terra",
+      "categoria": "Natureza e Exploração",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "40-60 min",
+      "preparo": "5 min",
+      "bagunca": "Baixa",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 117,
+      "nome": "Bingo de Imagens",
+      "categoria": "Jogos de Tabuleiro e Cartas",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "40-60 min",
+      "preparo": "10-15 min",
+      "bagunca": "Nenhuma",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 118,
+      "nome": "Labirinto de Papel",
+      "categoria": "Lógica e Matemática",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "60+ min",
+      "preparo": "5 min",
+      "bagunca": "Alta",
+      "custo": "Grátis",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 119,
+      "nome": "Jardim de Ervas",
+      "categoria": "Natureza e Exploração",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "60+ min",
+      "preparo": "10-15 min",
+      "bagunca": "Baixa",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 121,
+      "nome": "Arte com Sal e Cola",
+      "categoria": "Artes Experimentais e Sensoriais",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "10-20 min",
+      "preparo": "5 min",
+      "bagunca": "Alta",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 122,
+      "nome": "Trilha",
+      "categoria": "Jogos de Tabuleiro e Cartas",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "40-60 min",
+      "preparo": "10-20 min",
+      "bagunca": "Baixa",
+      "custo": "Grátis",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 124,
+      "nome": "Teatro de Leitura",
+      "categoria": "Leitura e Narrativa",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "20-40 min",
+      "preparo": "5-10 min",
+      "bagunca": "Baixa",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 126,
+      "nome": "História em Quadrinhos",
+      "categoria": "Leitura e Narrativa",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "40-60 min",
+      "preparo": "10-15 min",
+      "bagunca": "Alta",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 127,
+      "nome": "Gelatina Sensorial",
+      "categoria": "Atividades Sensoriais",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "20-40 min",
+      "preparo": "10-15 min",
+      "bagunca": "Baixa",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Nenhuma",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 129,
+      "nome": "Competição Criativa",
+      "categoria": "Desafios e Missões",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "20-40 min",
+      "preparo": "10-15 min",
+      "bagunca": "Nenhuma",
+      "custo": "Grátis",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 132,
+      "nome": "Lâmpada de Lava",
+      "categoria": "Ciências e Experimentos",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "10-20 min",
+      "preparo": "5-10 min",
+      "bagunca": "Média",
+      "custo": "Baixo (até R$10)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 133,
+      "nome": "Banda com Instrumentos Caseiros",
+      "categoria": "Música e Ritmo",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "20-40 min",
+      "preparo": "5-15 min",
+      "bagunca": "Nenhuma",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 136,
+      "nome": "Ovo Flutuante",
+      "categoria": "Ciências e Experimentos",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "5-6 anos",
+      "tempo": "60+ min",
+      "preparo": "5-15 min",
+      "bagunca": "Baixa",
+      "custo": "Grátis",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 138,
+      "nome": "Noite do Jogo",
+      "categoria": "Atividades de Conexão",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "40-60 min",
+      "preparo": "5-10 min",
+      "bagunca": "Média",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 139,
+      "nome": "Hora do Conto",
+      "categoria": "Leitura e Narrativa",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "60+ min",
+      "preparo": "5-10 min",
+      "bagunca": "Baixa",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 149,
+      "nome": "Porta-Retratos Decorado",
+      "categoria": "Projetos Criativos",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "3-4 anos",
+      "tempo": "60+ min",
+      "preparo": "5-10 min",
+      "bagunca": "Média",
+      "custo": "Grátis",
+      "supervisao": "Moderada",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": 150,
+      "nome": "Ritual de Gratidão",
+      "categoria": "Atividades de Conexão",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "40-60 min",
+      "preparo": "10-15 min",
+      "bagunca": "Média",
+      "custo": "Médio (R$10-30)",
+      "supervisao": "Mínima",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    },
+    {
+      "id": "-4",
+      "nome": "Karaokê Familiar (Consolidada)",
+      "categoria": "Música e Ritmo",
+      "pontuacao": 100.0,
+      "status": "COMPLETA",
+      "faixa_etaria": "7-8 anos",
+      "tempo": "20-40 min",
+      "preparo": "10-20 min",
+      "bagunca": "Alta",
+      "custo": "Alto (R$30+)",
+      "supervisao": "Constante",
+      "problemas": [
+        "Nenhum"
+      ],
+      "qtd_problemas": 0,
+      "problematica": false
+    }
+  ]
+}
