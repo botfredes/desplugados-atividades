@@ -214,21 +214,29 @@ const ActivityDetail: React.FC = () => {
         </div>
       </div>
 
-      {/* Descrição e Como Aplicar */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-100">Descrição</h3>
-          <div className="prose max-w-none">
-            <p className="text-gray-700 whitespace-pre-wrap">{dados.descricao || 'Sem descrição disponível.'}</p>
+      {/* Conteúdo Detalhado (HTML ou Texto Simples) */}
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
+        <h3 className="text-xl font-bold text-gray-800 mb-6 pb-2 border-b-2 border-blue-500 inline-block">
+          {dados.descricao_html ? 'Conteúdo Detalhado' : 'Descrição e Como Aplicar'}
+        </h3>
+        
+        {dados.descricao_html ? (
+          <div 
+            className="prose max-w-none prose-blue html-content"
+            dangerouslySetInnerHTML={{ __html: dados.descricao_html }} 
+          />
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h4 className="font-bold text-gray-700 mb-2">Descrição</h4>
+              <p className="text-gray-700 whitespace-pre-wrap">{dados.descricao || 'Sem descrição disponível.'}</p>
+            </div>
+            <div>
+              <h4 className="font-bold text-gray-700 mb-2">Como Aplicar</h4>
+              <p className="text-gray-700 whitespace-pre-wrap">{dados.como_aplicar || 'Não informado.'}</p>
+            </div>
           </div>
-        </div>
-
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-100">Como Aplicar</h3>
-          <div className="prose max-w-none">
-            <p className="text-gray-700 whitespace-pre-wrap">{dados.como_aplicar || 'Não informado'}</p>
-          </div>
-        </div>
+        )}
       </div>
 
       {/* Comentários */}
