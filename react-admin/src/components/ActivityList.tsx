@@ -7,6 +7,8 @@ const ActivityList: React.FC = () => {
   const [activities, setActivities] = useState<Atividade[]>([]);
   const [page, setPage] = useState(1);
   const [totalCount, setTotalCount] = useState(0);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
   const [filters, setFilters] = useState<Filters>({
     status_revisao: '',
     categoria: '',
@@ -27,10 +29,18 @@ const ActivityList: React.FC = () => {
 
   useEffect(() => {
     const loadActivities = async () => {
-      const data = await fetchActivities(page, filters);
-      setActivities(data);
-      // Em uma implementação real, teríamos o total de atividades
-      setTotalCount(143); // Total fixo por enquanto
+      setLoading(true);
+      setError(null);
+      try {
+        const data = await fetchActivities(page, filters);
+        setActivities(data);
+        setTotalCount(143);
+      } catch (err) {
+        setError('Erro ao carregar atividades. Tente novamente.');
+        console.error('Erro ao carregar atividades:', err);
+      } finally {
+        setLoading(false);
+      }
     };
     loadActivities();
   }, [page, filters]);
