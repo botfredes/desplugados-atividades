@@ -32,9 +32,16 @@ jobs:
         with:
           node-version: '18'
       
+      - name: Debug Node and npm versions
+        working-directory: ./react-admin
+        run: |
+          node --version
+          npm --version
+          ls -la
+      
       - name: Install dependencies
         working-directory: ./react-admin
-        run: npm install --legacy-peer-deps
+        run: npm install --verbose
       
       - name: Build React app
         working-directory: ./react-admin
