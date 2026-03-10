@@ -5,6 +5,7 @@ on:
     branches: [ main ]
     paths:
       - 'react-admin/**'
+      - '.github/workflows/deploy-react.yml'
   workflow_dispatch:
 
 permissions:
@@ -33,7 +34,7 @@ jobs:
       
       - name: Install dependencies
         working-directory: ./react-admin
-        run: npm ci --legacy-peer-deps
+        run: npm install --legacy-peer-deps
       
       - name: Build React app
         working-directory: ./react-admin
