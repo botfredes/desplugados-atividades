@@ -186,7 +186,10 @@ const ActivityDetail: React.FC = () => {
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
           <h3 className="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-100">Materiais Necessários</h3>
           <div className="prose max-w-none">
-            <p className="text-gray-700 whitespace-pre-wrap">{dados.materiais_necessarios || 'Não informado'}</p>
+            <div 
+              className="text-gray-700 html-content"
+              dangerouslySetInnerHTML={{ __html: dados.materiais_necessarios || 'Não informado' }} 
+            />
           </div>
         </div>
 
