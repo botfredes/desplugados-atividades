@@ -4,6 +4,7 @@ import { fetchActivity, updateActivityStatus } from '../api/activities';
 import CommentSection from './CommentSection';
 import ImprovementRequestModal from './ImprovementRequestModal';
 import { Atividade } from '../types';
+import { formatCustoSimples, getCustoColorClass, getCustoDescription, formatFaixaEtaria } from '../utils/formatting';
 
 const ActivityDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -169,7 +170,19 @@ const ActivityDetail: React.FC = () => {
             </div>
             <div>
               <label className="text-sm text-gray-500 block mb-1">Faixa etária</label>
-              <p className="font-medium text-gray-800">{dados.faixa_etaria}</p>
+              {dados.faixa_etaria_expandida && dados.faixa_etaria_expandida !== dados.faixa_etaria ? (
+                <div>
+                  <p className="font-medium text-gray-800">
+                    {dados.faixa_etaria_expandida}{' '}
+                    <span className="text-xs text-blue-600 bg-blue-50 px-2 py-1 rounded-full ml-2" title={`Faixa original: ${dados.faixa_etaria}`}>
+                      Expandida ↗
+                    </span>
+                  </p>
+                  <p className="text-sm text-gray-500 mt-1">Original: {dados.faixa_etaria}</p>
+                </div>
+              ) : (
+                <p className="font-medium text-gray-800">{dados.faixa_etaria}</p>
+              )}
             </div>
             <div>
               <label className="text-sm text-gray-500 block mb-1">Tempo de entretenimento</label>
@@ -203,7 +216,23 @@ const ActivityDetail: React.FC = () => {
             </div>
             <div>
               <label className="text-sm text-gray-500 block mb-1">Custo</label>
-              <p className="font-medium text-gray-800">{dados.custo || 'Não informado'}</p>
+              {dados.custo_simples !== undefined ? (
+                <div>
+                  <p className="font-medium text-gray-800 flex items-center">
+                    <span className={`text-xl mr-2 ${getCustoColorClass(dados.custo_simples)}`}>
+                      {formatCustoSimples(dados.custo_simples)}
+                    </span>
+                    <span className="text-sm text-gray-600">
+                      {getCustoDescription(dados.custo_simples)}
+                    </span>
+                  </p>
+                  {dados.custo && (
+                    <p className="text-sm text-gray-500 mt-1">Detalhe: {dados.custo}</p>
+                  )}
+                </div>
+              ) : (
+                <p className="font-medium text-gray-800">{dados.custo || 'Não informado'}</p>
+              )}
             </div>
             <div>
               <label className="text-sm text-gray-500 block mb-1">Supervisão</label>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchActivities, Filters } from '../api/activities';
 import { Atividade } from '../types';
+import { formatCustoSimples, getCustoColorClass, formatFaixaEtaria } from '../utils/formatting';
 
 const ActivityList: React.FC = () => {
   const [activities, setActivities] = useState<Atividade[]>([]);
@@ -26,7 +27,7 @@ const ActivityList: React.FC = () => {
     { value: 'nao_aprovado', label: 'Não Aprovado' } // Filtro especial
   ];
   const categoriaOptions = ['Artes', 'Brincadeiras', 'Culinária', 'Esportes', 'Jogos', 'Música', 'Natureza', 'Tecnologia'];
-  const idadeOptions = ['3-4 anos', '4-5 anos', '5-6 anos', '6-7 anos', '7-8 anos', '8-10 anos'];
+  const idadeOptions = ['3-4 anos', '3-6 anos', '4-8 anos', '5-6 anos', '6-8 anos', '7-8 anos', '3-8 anos', '5-8 anos'];
 
   useEffect(() => {
     const loadActivities = async () => {
@@ -193,9 +194,31 @@ const ActivityList: React.FC = () => {
                 <span className="px-2 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800 border border-gray-200">
                   {activity.dados.categoria}
                 </span>
-                <span className="px-2 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800 border border-gray-200">
-                  {activity.dados.faixa_etaria}
-                </span>
+                
+                {/* Faixa etária (expandida se diferente) */}
+                {activity.dados.faixa_etaria_expandida && 
+                 activity.dados.faixa_etaria_expandida !== activity.dados.faixa_etaria ? (
+                  <span 
+                    className="px-2 py-1 text-xs font-medium rounded-full bg-blue-50 text-blue-700 border border-blue-200"
+                    title={`Faixa original: ${activity.dados.faixa_etaria}`}
+                  >
+                    {activity.dados.faixa_etaria_expandida} ↗
+                  </span>
+                ) : (
+                  <span className="px-2 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800 border border-gray-200">
+                    {activity.dados.faixa_etaria}
+                  </span>
+                )}
+                
+                {/* Custo simplificado */}
+                {activity.dados.custo_simples !== undefined && (
+                  <span 
+                    className={`px-2 py-1 text-xs font-medium rounded-full border ${getCustoColorClass(activity.dados.custo_simples)} ${activity.dados.custo_simples === 0 ? 'bg-green-50 border-green-200' : 'bg-gray-50 border-gray-200'}`}
+                    title={activity.dados.custo || 'Custo'}
+                  >
+                    {formatCustoSimples(activity.dados.custo_simples)}
+                  </span>
+                )}
               </div>
               
               {/* Detalhes Resumidos */}
@@ -210,7 +233,22 @@ const ActivityList: React.FC = () => {
                   <svg className="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
                   </svg>
-                  <span>Custo: {activity.dados.custo || 'Não informado'}</span>
+                  <span>
+                    Custo:{' '}
+                    {activity.dados.custo_simples !== undefined ? (
+                      <span className="font-medium" title={activity.dados.custo || ''}>
+                        {' '}
+                        <span className={getCustoColorClass(activity.dados.custo_simples)}>
+                          {formatCustoSimples(activity.dados.custo_simples)}
+                        </span>
+                        {activity.dados.custo && activity.dados.custo_simples !== 0 && (
+                          <span className="text-gray-500 text-xs ml-1">({activity.dados.custo})</span>
+                        )}
+                      </span>
+                    ) : (
+                      <span>{activity.dados.custo || 'Não informado'}</span>
+                    )}
+                  </span>
                 </div>
               </div>
               
