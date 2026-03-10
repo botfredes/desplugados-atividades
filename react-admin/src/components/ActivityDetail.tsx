@@ -57,11 +57,11 @@ const ActivityDetail: React.FC = () => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'aprovada': return 'bg-success text-white';
-      case 'pendente': return 'bg-warning text-gray-800';
-      case 'em_revisao': return 'bg-primary text-white';
-      case 'precisa_melhorias': return 'bg-error text-white';
-      default: return 'bg-gray-200 text-gray-800';
+      case 'aprovada': return 'bg-green-100 text-green-800 border-green-200';
+      case 'pendente': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+      case 'em_revisao': return 'bg-blue-100 text-blue-800 border-blue-200';
+      case 'precisa_melhorias': return 'bg-red-100 text-red-800 border-red-200';
+      default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
 
@@ -69,7 +69,7 @@ const ActivityDetail: React.FC = () => {
     return (
       <div className="container mx-auto px-4 py-8">
         <div className="text-center">
-          <div className="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+          <div className="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
           <p className="mt-4 text-gray-600">Carregando atividade...</p>
         </div>
       </div>
@@ -79,12 +79,12 @@ const ActivityDetail: React.FC = () => {
   if (!activity) {
     return (
       <div className="container mx-auto px-4 py-8">
-        <div className="bg-error/10 border border-error/20 rounded-lg p-6">
-          <h2 className="text-xl font-bold text-error mb-2">Atividade não encontrada</h2>
+        <div className="bg-red-50 border border-red-200 rounded-lg p-6">
+          <h2 className="text-xl font-bold text-red-700 mb-2">Atividade não encontrada</h2>
           <p className="text-gray-600 mb-4">A atividade com ID {id} não foi encontrada.</p>
           <button
             onClick={() => navigate('/')}
-            className="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark"
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
           >
             Voltar para a lista
           </button>
@@ -97,115 +97,118 @@ const ActivityDetail: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-8">
+      {/* Botão Voltar */}
+      <button
+        onClick={() => navigate('/')}
+        className="inline-flex items-center text-blue-600 hover:text-blue-800 mb-6 group"
+      >
+        <svg className="w-5 h-5 mr-2 transition-transform group-hover:-translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        <span className="font-medium">Voltar para lista</span>
+      </button>
+
       {/* Cabeçalho */}
-      <div className="mb-6">
-        <button
-          onClick={() => navigate('/')}
-          className="inline-flex items-center text-primary hover:text-primary-dark mb-4"
-        >
-          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
-          </svg>
-          Voltar para lista
-        </button>
-        
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
         <div className="flex flex-col md:flex-row md:items-center justify-between">
-          <div>
-            <h1 className="text-3xl font-bold text-gray-900">{dados.nome}</h1>
-            <div className="flex items-center mt-2 space-x-4">
-              <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getStatusColor(activity.status_revisao)}`}>
+          <div className="mb-4 md:mb-0">
+            <div className="flex items-center mb-2">
+              <span className={`px-3 py-1 rounded-full text-sm font-semibold border ${getStatusColor(activity.status_revisao)} mr-3`}>
                 {activity.status_revisao}
               </span>
-              <span className="text-gray-600">ID: {activity.id}</span>
+              <span className="text-gray-500 text-sm">ID: {activity.id}</span>
             </div>
+            <h1 className="text-3xl font-bold text-gray-900">{dados.nome}</h1>
+            <p className="text-gray-600 mt-2">Categoria: <span className="font-medium">{dados.categoria}</span> • Faixa etária: <span className="font-medium">{dados.faixa_etaria}</span></p>
           </div>
           
-          <div className="mt-4 md:mt-0">
-            <div className="flex flex-col sm:flex-row gap-3">
-              {/* Botão Aprovar */}
+          <div className="flex flex-col sm:flex-row gap-3">
+            {/* Botão Aprovar */}
+            <button
+              onClick={approveActivity}
+              className="px-5 py-3 bg-green-600 text-white font-medium rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 flex items-center justify-center transition-colors"
+            >
+              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+              </svg>
+              Aprovar
+            </button>
+            
+            {/* Botão Solicitar Melhorias */}
+            {!improvementRequested ? (
               <button
-                onClick={approveActivity}
-                className="px-6 py-3 bg-success text-white font-medium rounded-lg hover:bg-success-dark focus:outline-none focus:ring-2 focus:ring-success focus:ring-offset-2 flex items-center justify-center"
+                onClick={openImprovementModal}
+                className="px-5 py-3 bg-red-600 text-white font-medium rounded-lg hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 flex items-center justify-center transition-colors"
               >
-                <svg className="w-5 h-5 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.998-.833-2.732 0L4.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
                 </svg>
-                Aprovar
+                Solicitar Melhorias
               </button>
-              
-              {/* Botão Solicitar Melhorias */}
-              {!improvementRequested ? (
-                <button
-                  onClick={openImprovementModal}
-                  className="px-6 py-3 bg-error text-white font-medium rounded-lg hover:bg-error-dark focus:outline-none focus:ring-2 focus:ring-error focus:ring-offset-2 flex items-center justify-center"
-                >
-                  <svg className="w-5 h-5 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.998-.833-2.732 0L4.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
-                  </svg>
-                  Solicitar Melhorias
-                </button>
-              ) : (
-                <div className="px-6 py-3 bg-error/10 text-error font-medium rounded-lg border border-error/20 flex items-center justify-center">
-                  <svg className="w-5 h-5 inline-block mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.998-.833-2.732 0L4.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
-                  </svg>
-                  Melhorias Solicitadas
-                </div>
-              )}
-            </div>
+            ) : (
+              <div className="px-5 py-3 bg-red-50 text-red-700 font-medium rounded-lg border border-red-200 flex items-center justify-center">
+                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.998-.833-2.732 0L4.732 16.5c-.77.833.192 2.5 1.732 2.5z"></path>
+                </svg>
+                Melhorias Solicitadas
+              </div>
+            )}
           </div>
         </div>
       </div>
 
-      {/* Informações principais */}
+      {/* Grid de Informações */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">Informações Básicas</h3>
-          <div className="space-y-3">
+        {/* Informações Básicas */}
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-100">Informações Básicas</h3>
+          <div className="space-y-4">
             <div>
-              <label className="text-sm text-gray-500">Categoria</label>
-              <p className="font-medium">{dados.categoria}</p>
+              <label className="text-sm text-gray-500 block mb-1">Categoria</label>
+              <p className="font-medium text-gray-800">{dados.categoria}</p>
             </div>
             <div>
-              <label className="text-sm text-gray-500">Faixa etária</label>
-              <p className="font-medium">{dados.faixa_etaria}</p>
+              <label className="text-sm text-gray-500 block mb-1">Faixa etária</label>
+              <p className="font-medium text-gray-800">{dados.faixa_etaria}</p>
             </div>
             <div>
-              <label className="text-sm text-gray-500">Tempo de entretenimento</label>
-              <p className="font-medium">{dados.tempo_entretenimento || 'Não informado'}</p>
+              <label className="text-sm text-gray-500 block mb-1">Tempo de entretenimento</label>
+              <p className="font-medium text-gray-800">{dados.tempo_entretenimento || 'Não informado'}</p>
             </div>
             <div>
-              <label className="text-sm text-gray-500">Preparo adulto</label>
-              <p className="font-medium">{dados.preparo_adulto || 'Não informado'}</p>
+              <label className="text-sm text-gray-500 block mb-1">Preparo adulto</label>
+              <p className="font-medium text-gray-800">{dados.preparo_adulto || 'Não informado'}</p>
             </div>
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">Materiais</h3>
+        {/* Materiais */}
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-100">Materiais Necessários</h3>
           <div className="prose max-w-none">
-            <p className="text-gray-700">{dados.materiais_necessarios || 'Não informado'}</p>
+            <p className="text-gray-700 whitespace-pre-wrap">{dados.materiais_necessarios || 'Não informado'}</p>
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">Classificação</h3>
-          <div className="space-y-3">
+        {/* Classificação */}
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-100">Classificação</h3>
+          <div className="space-y-4">
             <div>
-              <label className="text-sm text-gray-500">Nível de bagunça</label>
-              <p className="font-medium">{dados.nivel_bagunca || 'Não informado'}</p>
+              <label className="text-sm text-gray-500 block mb-1">Nível de bagunça</label>
+              <p className="font-medium text-gray-800">{dados.nivel_bagunca || 'Não informado'}</p>
             </div>
             <div>
-              <label className="text-sm text-gray-500">Custo</label>
-              <p className="font-medium">{dados.custo || 'Não informado'}</p>
+              <label className="text-sm text-gray-500 block mb-1">Custo</label>
+              <p className="font-medium text-gray-800">{dados.custo || 'Não informado'}</p>
             </div>
             <div>
-              <label className="text-sm text-gray-500">Supervisão</label>
-              <p className="font-medium">{dados.supervisao || 'Não informado'}</p>
+              <label className="text-sm text-gray-500 block mb-1">Supervisão</label>
+              <p className="font-medium text-gray-800">{dados.supervisao || 'Não informado'}</p>
             </div>
             <div>
-              <label className="text-sm text-gray-500">Tipo de atividade</label>
-              <p className="font-medium">{dados.tipo_atividade || 'Não informado'}</p>
+              <label className="text-sm text-gray-500 block mb-1">Tipo de atividade</label>
+              <p className="font-medium text-gray-800">{dados.tipo_atividade || 'Não informado'}</p>
             </div>
           </div>
         </div>
@@ -213,23 +216,23 @@ const ActivityDetail: React.FC = () => {
 
       {/* Descrição e Como Aplicar */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">Descrição</h3>
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-100">Descrição</h3>
           <div className="prose max-w-none">
-            <p className="text-gray-700">{dados.descricao || 'Sem descrição disponível.'}</p>
+            <p className="text-gray-700 whitespace-pre-wrap">{dados.descricao || 'Sem descrição disponível.'}</p>
           </div>
         </div>
 
-        <div className="bg-white p-6 rounded-lg shadow-md">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">Como Aplicar</h3>
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4 pb-2 border-b border-gray-100">Como Aplicar</h3>
           <div className="prose max-w-none">
-            <p className="text-gray-700">{dados.como_aplicar || 'Não informado'}</p>
+            <p className="text-gray-700 whitespace-pre-wrap">{dados.como_aplicar || 'Não informado'}</p>
           </div>
         </div>
       </div>
 
       {/* Comentários */}
-      <div className="bg-white p-6 rounded-lg shadow-md">
+      <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-8">
         <CommentSection activityId={activity.id} comments={activity.comentarios || []} />
       </div>
 

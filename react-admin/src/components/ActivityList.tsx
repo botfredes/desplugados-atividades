@@ -52,29 +52,51 @@ const ActivityList: React.FC = () => {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'aprovada': return 'bg-success text-white';
-      case 'pendente': return 'bg-warning text-gray-800';
-      case 'em_revisao': return 'bg-primary text-white';
-      case 'precisa_melhorias': return 'bg-error text-white';
-      default: return 'bg-gray-200 text-gray-800';
+      case 'aprovada': return 'bg-green-100 text-green-800 border-green-200';
+      case 'pendente': return 'bg-yellow-100 text-yellow-800 border-yellow-200';
+      case 'em_revisao': return 'bg-blue-100 text-blue-800 border-blue-200';
+      case 'precisa_melhorias': return 'bg-red-100 text-red-800 border-red-200';
+      default: return 'bg-gray-100 text-gray-800 border-gray-200';
     }
   };
 
   const totalPages = Math.ceil(totalCount / 10);
+
+  if (loading) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6 text-gray-800">Atividades Desplugados</h1>
+        <div className="flex justify-center items-center h-64">
+          <div className="text-gray-600">Carregando atividades...</div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="container mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold mb-6 text-gray-800">Atividades Desplugados</h1>
+        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+          {error}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6 text-gray-800">Atividades Desplugados</h1>
       
       {/* Filtros */}
-      <div className="bg-white p-4 rounded-lg shadow-md mb-6">
+      <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 mb-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {/* Busca */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Buscar</label>
             <input
               type="text"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               placeholder="Nome da atividade..."
               value={filters.search || ''}
               onChange={(e) => handleFilterChange('search', e.target.value)}
@@ -85,7 +107,7 @@ const ActivityList: React.FC = () => {
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Status</label>
             <select
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               value={filters.status_revisao || ''}
               onChange={(e) => handleFilterChange('status_revisao', e.target.value)}
             >
@@ -99,7 +121,7 @@ const ActivityList: React.FC = () => {
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Categoria</label>
             <select
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               value={filters.categoria || ''}
               onChange={(e) => handleFilterChange('categoria', e.target.value)}
             >
@@ -114,7 +136,7 @@ const ActivityList: React.FC = () => {
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Idade</label>
             <select
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               value={filters.faixa_etaria || ''}
               onChange={(e) => handleFilterChange('faixa_etaria', e.target.value)}
             >
@@ -127,117 +149,123 @@ const ActivityList: React.FC = () => {
         </div>
       </div>
       
-      {/* Tabela */}
-      <div className="bg-white rounded-lg shadow-md overflow-hidden">
-        <div className="overflow-x-auto">
-          <table className="min-w-full divide-y divide-gray-200">
-            <thead className="bg-gray-50">
-              <tr>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nome</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Categoria</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Idade</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
-                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ações</th>
-              </tr>
-            </thead>
-            <tbody className="bg-white divide-y divide-gray-200">
-              {activities.map((activity) => (
-                <tr key={activity.id} className="hover:bg-gray-50">
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <div className="font-medium text-gray-900">{activity.dados.nome}</div>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800">
-                      {activity.dados.categoria}
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    {activity.dados.faixa_etaria}
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
-                    <span className={`px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-full ${getStatusColor(activity.status_revisao)}`}>
-                      {activity.status_revisao}
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
-                    <Link
-                      to={`/activity/${activity.id}`}
-                      className="text-primary hover:text-primary-dark mr-3"
-                    >
-                      Ver detalhes
-                    </Link>
-                    <button
-                      className="text-error hover:text-error-dark"
-                      onClick={() => {/* Implementar ação rápida */}}
-                    >
-                      Solicitar melhorias
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+      {/* Grid de Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-8">
+        {activities.map((activity) => (
+          <Link
+            key={activity.id}
+            to={`/activity/${activity.id}`}
+            className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 hover:shadow-md hover:border-blue-300 transition-all duration-200 cursor-pointer block"
+          >
+            <div className="flex flex-col h-full">
+              {/* Cabeçalho do Card */}
+              <div className="mb-3">
+                <h3 className="font-semibold text-gray-800 text-lg line-clamp-2">
+                  {activity.dados.nome}
+                </h3>
+              </div>
+              
+              {/* Badges */}
+              <div className="flex flex-wrap gap-2 mb-3">
+                <span className={`px-2 py-1 text-xs font-medium rounded-full border ${getStatusColor(activity.status_revisao)}`}>
+                  {activity.status_revisao}
+                </span>
+                <span className="px-2 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800 border border-gray-200">
+                  {activity.dados.categoria}
+                </span>
+                <span className="px-2 py-1 text-xs font-medium rounded-full bg-gray-100 text-gray-800 border border-gray-200">
+                  {activity.dados.faixa_etaria}
+                </span>
+              </div>
+              
+              {/* Detalhes Resumidos */}
+              <div className="mt-auto text-sm text-gray-600 space-y-1">
+                <div className="flex items-center">
+                  <svg className="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                  <span>Tempo: {activity.dados.tempo_preparacao || 'Não informado'}</span>
+                </div>
+                <div className="flex items-center">
+                  <svg className="w-4 h-4 mr-2 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                  </svg>
+                  <span>Custo: {activity.dados.custo || 'Não informado'}</span>
+                </div>
+              </div>
+              
+              {/* Botão de Ação (opcional) */}
+              <div className="mt-4 pt-3 border-t border-gray-100">
+                <div className="text-blue-600 font-medium text-sm flex items-center">
+                  Ver detalhes
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </Link>
+        ))}
+      </div>
+      
+      {/* Paginação */}
+      <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6 rounded-lg shadow-sm border border-gray-200">
+        <div className="flex-1 flex justify-between sm:hidden">
+          <button
+            onClick={() => setPage(p => Math.max(1, p - 1))}
+            disabled={page === 1}
+            className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Anterior
+          </button>
+          <button
+            onClick={() => setPage(p => p + 1)}
+            disabled={page >= totalPages}
+            className="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            Próxima
+          </button>
         </div>
-        
-        {/* Paginação */}
-        <div className="bg-white px-4 py-3 flex items-center justify-between border-t border-gray-200 sm:px-6">
-          <div className="flex-1 flex justify-between sm:hidden">
-            <button
-              onClick={() => setPage(p => Math.max(1, p - 1))}
-              disabled={page === 1}
-              className="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50"
-            >
-              Anterior
-            </button>
-            <button
-              onClick={() => setPage(p => p + 1)}
-              disabled={page >= totalPages}
-              className="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 disabled:opacity-50"
-            >
-              Próxima
-            </button>
+        <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+          <div>
+            <p className="text-sm text-gray-700">
+              Mostrando <span className="font-medium">{(page - 1) * 10 + 1}</span> a{' '}
+              <span className="font-medium">{Math.min(page * 10, totalCount)}</span> de{' '}
+              <span className="font-medium">{totalCount}</span> atividades
+            </p>
           </div>
-          <div className="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
-            <div>
-              <p className="text-sm text-gray-700">
-                Mostrando <span className="font-medium">{(page - 1) * 10 + 1}</span> a{' '}
-                <span className="font-medium">{Math.min(page * 10, totalCount)}</span> de{' '}
-                <span className="font-medium">{totalCount}</span> atividades
-              </p>
-            </div>
-            <div>
-              <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+          <div>
+            <nav className="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
+              <button
+                onClick={() => setPage(p => Math.max(1, p - 1))}
+                disabled={page === 1}
+                className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <span className="sr-only">Anterior</span>
+                &larr;
+              </button>
+              {[...Array(totalPages)].map((_, i) => (
                 <button
-                  onClick={() => setPage(p => Math.max(1, p - 1))}
-                  disabled={page === 1}
-                  className="relative inline-flex items-center px-2 py-2 rounded-l-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50"
+                  key={i + 1}
+                  onClick={() => setPage(i + 1)}
+                  className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium ${
+                    page === i + 1
+                      ? 'z-10 bg-blue-50 border-blue-500 text-blue-600'
+                      : 'bg-white border-gray-300 text-gray-700 hover:bg-gray-50'
+                  }`}
                 >
-                  <span className="sr-only">Anterior</span>
-                  &larr;
+                  {i + 1}
                 </button>
-                {[...Array(totalPages)].map((_, i) => (
-                  <button
-                    key={i + 1}
-                    onClick={() => setPage(i + 1)}
-                    className={`relative inline-flex items-center px-4 py-2 border text-sm font-medium ${
-                      page === i + 1
-                        ? 'z-10 bg-primary border-primary text-white'
-                        : 'bg-white border-gray-300 text-gray-700 hover:bg-gray-50'
-                    }`}
-                  >
-                    {i + 1}
-                  </button>
-                ))}
-                <button
-                  onClick={() => setPage(p => p + 1)}
-                  disabled={page >= totalPages}
-                  className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50"
-                >
-                  <span className="sr-only">Próxima</span>
-                  &rarr;
-                </button>
-              </nav>
-            </div>
+              ))}
+              <button
+                onClick={() => setPage(p => p + 1)}
+                disabled={page >= totalPages}
+                className="relative inline-flex items-center px-2 py-2 rounded-r-md border border-gray-300 bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                <span className="sr-only">Próxima</span>
+                &rarr;
+              </button>
+            </nav>
           </div>
         </div>
       </div>
