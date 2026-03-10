@@ -30,12 +30,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
-          cache-dependency-path: react-admin/package-lock.json
       
       - name: Install dependencies
         working-directory: ./react-admin
-        run: npm ci
+        run: npm ci --legacy-peer-deps
       
       - name: Build React app
         working-directory: ./react-admin
