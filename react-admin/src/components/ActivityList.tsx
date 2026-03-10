@@ -15,6 +15,7 @@ const ActivityList: React.FC = () => {
     faixa_etaria: '',
     search: '',
   });
+  const [searchInput, setSearchInput] = useState(filters.search || '');
 
   const statusOptions = [
     { value: '', label: 'Todos' },
@@ -49,6 +50,16 @@ const ActivityList: React.FC = () => {
     setFilters(prev => ({ ...prev, [key]: value }));
     setPage(1); // Resetar para primeira página ao filtrar
   };
+
+  const handleSearchSubmit = () => {
+    setFilters(prev => ({ ...prev, search: searchInput }));
+    setPage(1);
+  };
+
+  // Sincronizar searchInput quando filters.search mudar externamente (ex: limpar filtros)
+  useEffect(() => {
+    setSearchInput(filters.search || '');
+  }, [filters.search]);
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -94,13 +105,22 @@ const ActivityList: React.FC = () => {
           {/* Busca */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Buscar</label>
-            <input
-              type="text"
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Nome da atividade..."
-              value={filters.search || ''}
-              onChange={(e) => handleFilterChange('search', e.target.value)}
-            />
+            <div className="flex flex-col sm:flex-row gap-2">
+              <input
+                type="text"
+                className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                placeholder="Nome da atividade..."
+                value={searchInput}
+                onChange={(e) => setSearchInput(e.target.value)}
+                onKeyDown={(e) => e.key === 'Enter' && handleSearchSubmit()}
+              />
+              <button
+                onClick={handleSearchSubmit}
+                className="px-4 py-2 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 w-full sm:w-auto"
+              >
+                Filtrar
+              </button>
+            </div>
           </div>
           
           {/* Status */}
