@@ -1,0 +1,61 @@
+name: Deploy React Admin to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'react-admin/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages-react"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: react-admin/package-lock.json
+      
+      - name: Install dependencies
+        working-directory: ./react-admin
+        run: npm ci
+      
+      - name: Build React app
+        working-directory: ./react-admin
+        run: npm run build
+      
+      - name: Create output directory
+        run: |
+          mkdir -p site/admin-react
+          cp -r react-admin/dist/* site/admin-react/
+          # Create a simple index.html redirect
+          echo '<!DOCTYPE html><html><head><meta http-equiv="refresh" content="0; url=./admin-react/"></head><body>Redirecting to React Admin...</body></html>' > site/index.html
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './site'
+      
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
