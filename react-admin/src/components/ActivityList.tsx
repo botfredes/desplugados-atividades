@@ -10,13 +10,45 @@ const ActivityList: React.FC = () => {
   const [totalCount, setTotalCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [filters, setFilters] = useState<Filters>({
-    status_revisao: '',
-    categoria: '',
-    faixa_etaria: '',
-    search: '',
-  });
+  // Carregar filtros do localStorage
+  const loadFiltersFromStorage = (): Filters => {
+    if (typeof window === 'undefined') {
+      return {
+        status_revisao: '',
+        categoria: '',
+        faixa_etaria: '',
+        search: '',
+      };
+    }
+    const saved = localStorage.getItem('desplugados_admin_filters');
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        return {
+          status_revisao: parsed.status_revisao || '',
+          categoria: parsed.categoria || '',
+          faixa_etaria: parsed.faixa_etaria || '',
+          search: parsed.search || '',
+        };
+      } catch (e) {
+        console.error('Erro ao carregar filtros do localStorage:', e);
+      }
+    }
+    return {
+      status_revisao: '',
+      categoria: '',
+      faixa_etaria: '',
+      search: '',
+    };
+  };
+
+  const [filters, setFilters] = useState<Filters>(loadFiltersFromStorage);
   const [searchInput, setSearchInput] = useState(filters.search || '');
+
+  // Salvar filtros no localStorage quando mudarem
+  useEffect(() => {
+    localStorage.setItem('desplugados_admin_filters', JSON.stringify(filters));
+  }, [filters]);
 
   const statusOptions = [
     { value: '', label: 'Todos' },
@@ -54,6 +86,17 @@ const ActivityList: React.FC = () => {
 
   const handleSearchSubmit = () => {
     setFilters(prev => ({ ...prev, search: searchInput }));
+    setPage(1);
+  };
+
+  const handleClearFilters = () => {
+    setFilters({
+      status_revisao: '',
+      categoria: '',
+      faixa_etaria: '',
+      search: '',
+    });
+    setSearchInput('');
     setPage(1);
   };
 
@@ -102,7 +145,7 @@ const ActivityList: React.FC = () => {
       
       {/* Filtros */}
       <div className="bg-white p-4 rounded-lg shadow-sm border border-gray-200 mb-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
           {/* Busca */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Buscar</label>
@@ -166,6 +209,16 @@ const ActivityList: React.FC = () => {
                 <option key={opt} value={opt}>{opt}</option>
               ))}
             </select>
+          </div>
+
+          {/* Limpar Filtros */}
+          <div className="flex items-end">
+            <button
+              onClick={handleClearFilters}
+              className="w-full px-4 py-2 bg-gray-200 text-gray-800 font-medium rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+            >
+              Limpar Filtros
+            </button>
           </div>
         </div>
       </div>
